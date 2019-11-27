@@ -74,6 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF0D07BF238E77A1006FE342 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AF0EE485235EF67D00158B51 /* LaunchScreen.storyboard */,
+				AF0EE480235EF67800158B51 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AF0D07C0238E77C7006FE342 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF0EE47E235EF67800158B51 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		AF0EE470235EF67700158B51 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +114,10 @@
 		AF0EE47B235EF67800158B51 /* IF26-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF0D07C0238E77C7006FE342 /* ViewControllers */,
+				AF0D07BF238E77A1006FE342 /* Storyboards */,
 				AF0EE47C235EF67800158B51 /* AppDelegate.swift */,
-				AF0EE47E235EF67800158B51 /* ViewController.swift */,
-				AF0EE480235EF67800158B51 /* Main.storyboard */,
 				AF0EE483235EF67D00158B51 /* Assets.xcassets */,
-				AF0EE485235EF67D00158B51 /* LaunchScreen.storyboard */,
 				AF0EE488235EF67D00158B51 /* Info.plist */,
 			);
 			path = "IF26-IOS";
