@@ -17,6 +17,8 @@
 		AF0EE487235EF67D00158B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0EE485235EF67D00158B51 /* LaunchScreen.storyboard */; };
 		AF0EE492235EF67D00158B51 /* IF26_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */; };
 		AF0EE49D235EF67E00158B51 /* IF26_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */; };
+		AF25930D238EA4D3007EFA90 /* AppVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25930C238EA4D3007EFA90 /* AppVariables.swift */; };
+		AF25930F238EA517007EFA90 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25930E238EA517007EFA90 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		AF0EE498235EF67E00158B51 /* IF26-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IF26-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IF26_IOSUITests.swift; sourceTree = "<group>"; };
 		AF0EE49E235EF67E00158B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF25930C238EA4D3007EFA90 /* AppVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVariables.swift; sourceTree = "<group>"; };
+		AF25930E238EA517007EFA90 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0EE47E235EF67800158B51 /* ViewController.swift */,
+				AF25930E238EA517007EFA90 /* FeedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				AF0D07BF238E77A1006FE342 /* Storyboards */,
 				AF0EE47C235EF67800158B51 /* AppDelegate.swift */,
 				AF0EE483235EF67D00158B51 /* Assets.xcassets */,
+				AF25930C238EA4D3007EFA90 /* AppVariables.swift */,
 				AF0EE488235EF67D00158B51 /* Info.plist */,
 			);
 			path = "IF26-IOS";
@@ -284,6 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF25930F238EA517007EFA90 /* FeedViewController.swift in Sources */,
+				AF25930D238EA4D3007EFA90 /* AppVariables.swift in Sources */,
 				AF0EE47F235EF67800158B51 /* ViewController.swift in Sources */,
 				AF0EE47D235EF67800158B51 /* AppDelegate.swift in Sources */,
 			);
