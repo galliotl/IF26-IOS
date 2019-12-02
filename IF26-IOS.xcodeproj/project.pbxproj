@@ -11,14 +11,17 @@
 		AF0D07C4238E7C9F006FE342 /* Music.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0D07C3238E7C9F006FE342 /* Music.storyboard */; };
 		AF0D07C6238E7D16006FE342 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0D07C5238E7D16006FE342 /* Account.storyboard */; };
 		AF0EE47D235EF67800158B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE47C235EF67800158B51 /* AppDelegate.swift */; };
-		AF0EE47F235EF67800158B51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE47E235EF67800158B51 /* ViewController.swift */; };
 		AF0EE482235EF67800158B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0EE480235EF67800158B51 /* Main.storyboard */; };
 		AF0EE484235EF67D00158B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0EE483235EF67D00158B51 /* Assets.xcassets */; };
 		AF0EE487235EF67D00158B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0EE485235EF67D00158B51 /* LaunchScreen.storyboard */; };
 		AF0EE492235EF67D00158B51 /* IF26_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */; };
 		AF0EE49D235EF67E00158B51 /* IF26_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */; };
-		AF25930D238EA4D3007EFA90 /* AppVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25930C238EA4D3007EFA90 /* AppVariables.swift */; };
 		AF25930F238EA517007EFA90 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25930E238EA517007EFA90 /* FeedViewController.swift */; };
+		AFB68DF723950DD900A50AB6 /* bensound-anewbeginning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFB68DF323950DD900A50AB6 /* bensound-anewbeginning.mp3 */; };
+		AFB68DF823950DD900A50AB6 /* bensound-creativeminds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFB68DF423950DD900A50AB6 /* bensound-creativeminds.mp3 */; };
+		AFB68DF923950DD900A50AB6 /* bensound-summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFB68DF523950DD900A50AB6 /* bensound-summer.mp3 */; };
+		AFB68DFA23950DD900A50AB6 /* bensound-ukulele.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFB68DF623950DD900A50AB6 /* bensound-ukulele.mp3 */; };
+		AFB68DFE23950EE100A50AB6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB68DFD23950EE100A50AB6 /* MusicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,6 @@
 		AF0D07C5238E7D16006FE342 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		AF0EE479235EF67800158B51 /* IF26-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IF26-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE47C235EF67800158B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF0EE47E235EF67800158B51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF0EE481235EF67800158B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF0EE483235EF67D00158B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0EE486235EF67D00158B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,8 +57,12 @@
 		AF0EE498235EF67E00158B51 /* IF26-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IF26-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IF26_IOSUITests.swift; sourceTree = "<group>"; };
 		AF0EE49E235EF67E00158B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF25930C238EA4D3007EFA90 /* AppVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVariables.swift; sourceTree = "<group>"; };
 		AF25930E238EA517007EFA90 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		AFB68DF323950DD900A50AB6 /* bensound-anewbeginning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-anewbeginning.mp3"; path = "../../../Downloads/bensound-anewbeginning.mp3"; sourceTree = "<group>"; };
+		AFB68DF423950DD900A50AB6 /* bensound-creativeminds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-creativeminds.mp3"; path = "../../../Downloads/bensound-creativeminds.mp3"; sourceTree = "<group>"; };
+		AFB68DF523950DD900A50AB6 /* bensound-summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-summer.mp3"; path = "../../../Downloads/bensound-summer.mp3"; sourceTree = "<group>"; };
+		AFB68DF623950DD900A50AB6 /* bensound-ukulele.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-ukulele.mp3"; path = "../../../Downloads/bensound-ukulele.mp3"; sourceTree = "<group>"; };
+		AFB68DFD23950EE100A50AB6 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = "../../../../Downloads/Music Player/MusicPlay/MusicViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +105,7 @@
 		AF0D07C0238E77C7006FE342 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF0EE47E235EF67800158B51 /* ViewController.swift */,
+				AFB68DFD23950EE100A50AB6 /* MusicViewController.swift */,
 				AF25930E238EA517007EFA90 /* FeedViewController.swift */,
 			);
 			path = ViewControllers;
@@ -132,7 +138,10 @@
 				AF0D07BF238E77A1006FE342 /* Storyboards */,
 				AF0EE47C235EF67800158B51 /* AppDelegate.swift */,
 				AF0EE483235EF67D00158B51 /* Assets.xcassets */,
-				AF25930C238EA4D3007EFA90 /* AppVariables.swift */,
+				AFB68DF323950DD900A50AB6 /* bensound-anewbeginning.mp3 */,
+				AFB68DF423950DD900A50AB6 /* bensound-creativeminds.mp3 */,
+				AFB68DF523950DD900A50AB6 /* bensound-summer.mp3 */,
+				AFB68DF623950DD900A50AB6 /* bensound-ukulele.mp3 */,
 				AF0EE488235EF67D00158B51 /* Info.plist */,
 			);
 			path = "IF26-IOS";
@@ -224,6 +233,11 @@
 				TargetAttributes = {
 					AF0EE478235EF67800158B51 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AF0EE48C235EF67D00158B51 = {
 						CreatedOnToolsVersion = 10.1;
@@ -261,11 +275,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0EE487235EF67D00158B51 /* LaunchScreen.storyboard in Resources */,
+				AFB68DF823950DD900A50AB6 /* bensound-creativeminds.mp3 in Resources */,
+				AFB68DFA23950DD900A50AB6 /* bensound-ukulele.mp3 in Resources */,
+				AFB68DF923950DD900A50AB6 /* bensound-summer.mp3 in Resources */,
 				AF0D07C4238E7C9F006FE342 /* Music.storyboard in Resources */,
 				AF0EE484235EF67D00158B51 /* Assets.xcassets in Resources */,
 				AF0D07C2238E7B81006FE342 /* Feed.storyboard in Resources */,
 				AF0D07C6238E7D16006FE342 /* Account.storyboard in Resources */,
 				AF0EE482235EF67800158B51 /* Main.storyboard in Resources */,
+				AFB68DF723950DD900A50AB6 /* bensound-anewbeginning.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,9 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF25930F238EA517007EFA90 /* FeedViewController.swift in Sources */,
-				AF25930D238EA4D3007EFA90 /* AppVariables.swift in Sources */,
-				AF0EE47F235EF67800158B51 /* ViewController.swift in Sources */,
 				AF0EE47D235EF67800158B51 /* AppDelegate.swift in Sources */,
+				AFB68DFE23950EE100A50AB6 /* MusicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

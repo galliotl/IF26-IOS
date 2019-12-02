@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ML-wl-E23">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XNA-oe-Bmo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,30 +11,70 @@
     </dependencies>
     <scenes>
         <!--Music-->
-        <scene sceneID="mua-ah-FWT">
+        <scene sceneID="eyo-Aa-HhI">
             <objects>
-                <viewController id="1ML-wl-E23" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zKf-2s-vd3">
+                <viewController id="XNA-oe-Bmo" customClass="MusicViewController" customModule="IF26_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RLR-xW-54y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-Xc-7du">
-                                <rect key="frame" x="164" y="323" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1j-g0-Zb1">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61c-uH-wZB">
+                                <rect key="frame" x="293" y="516" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="next:" destination="XNA-oe-Bmo" eventType="touchUpInside" id="oPQ-y4-d6T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6q6-9G-zB2">
+                                <rect key="frame" x="50" y="516" width="59" height="30"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="prev:" destination="XNA-oe-Bmo" eventType="touchUpInside" id="Laf-sK-hre"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NH-pE-4Ys">
+                                <rect key="frame" x="172" y="516" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="o7n-Ai-R2R"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playPauseClicked:" destination="XNA-oe-Bmo" eventType="touchUpInside" id="YFf-js-PSI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="2gO-Te-O60"/>
+                        <constraints>
+                            <constraint firstItem="RsH-96-SKD" firstAttribute="bottom" secondItem="61c-uH-wZB" secondAttribute="bottom" constant="72" id="4lm-UX-chi"/>
+                            <constraint firstItem="RsH-96-SKD" firstAttribute="bottom" secondItem="A1j-g0-Zb1" secondAttribute="bottom" constant="274" id="AGe-l2-jJF"/>
+                            <constraint firstItem="RsH-96-SKD" firstAttribute="trailing" secondItem="61c-uH-wZB" secondAttribute="trailing" constant="50" id="Dq9-vV-VjC"/>
+                            <constraint firstItem="RsH-96-SKD" firstAttribute="bottom" secondItem="6q6-9G-zB2" secondAttribute="bottom" constant="72" id="EvZ-93-izr"/>
+                            <constraint firstItem="A1j-g0-Zb1" firstAttribute="leading" secondItem="RsH-96-SKD" secondAttribute="leading" constant="16" id="JTI-Qq-F4h"/>
+                            <constraint firstItem="RsH-96-SKD" firstAttribute="trailing" secondItem="A1j-g0-Zb1" secondAttribute="trailing" constant="16" id="Rfb-sV-LT0"/>
+                            <constraint firstItem="6q6-9G-zB2" firstAttribute="leading" secondItem="RsH-96-SKD" secondAttribute="leading" constant="50" id="TaG-sy-EhP"/>
+                            <constraint firstItem="RsH-96-SKD" firstAttribute="bottom" secondItem="6NH-pE-4Ys" secondAttribute="bottom" constant="72" id="hwC-3X-daL"/>
+                            <constraint firstItem="A1j-g0-Zb1" firstAttribute="top" secondItem="RsH-96-SKD" secondAttribute="top" constant="303" id="q3w-0k-gvp"/>
+                            <constraint firstItem="RsH-96-SKD" firstAttribute="trailing" secondItem="6NH-pE-4Ys" secondAttribute="trailing" constant="173" id="rYx-Ws-53h"/>
+                            <constraint firstItem="6NH-pE-4Ys" firstAttribute="leading" secondItem="RsH-96-SKD" secondAttribute="leading" constant="172" id="u64-VE-n8g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RsH-96-SKD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Music" id="NbB-7l-p3T"/>
+                    <tabBarItem key="tabBarItem" title="Music" id="Txb-IR-uPb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="label" destination="A1j-g0-Zb1" id="9yK-jA-j9K"/>
+                        <outlet property="playPauseBtn" destination="6NH-pE-4Ys" id="Mhg-CL-sDD"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TC7-tj-hfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HqE-ar-tXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="-331"/>
+            <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
