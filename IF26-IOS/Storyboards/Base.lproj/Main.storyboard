@@ -12,17 +12,17 @@
         <!--Feed-->
         <scene sceneID="51B-Sh-ebl">
             <objects>
-                <viewControllerPlaceholder storyboardName="Feed" id="iDv-50-L3g" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="feed" storyboardName="Feed" id="iDv-50-L3g" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Vds-ZB-pWY"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Do4-az-QpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1782" y="588"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="mfR-SC-tHX">
             <objects>
-                <tabBarController id="uV0-cN-o53" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="main" id="uV0-cN-o53" customClass="MainViewController" customModule="IF26_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5aY-7y-EGr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -57,6 +57,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBM-UF-4aX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1298" y="588"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="8tr-eN-gTN">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" id="ooK-oB-JkR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxB-sN-65v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1532" y="661"/>
         </scene>
     </scenes>
 </document>

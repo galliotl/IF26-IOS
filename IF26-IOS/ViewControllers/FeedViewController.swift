@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+
+
 var audioPlayer = AVAudioPlayer()
 var feedsongs:[String] = []
 var thisSong = 0
@@ -20,6 +22,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         gettingSongNames()
     }
     
@@ -39,7 +42,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let audioPath = Bundle.main.path(forResource: feedsongs[indexPath.row], ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(AVAudioSession.Category.playback)
+            //try audioSession.setCategory(AVAudioSession.Category.playback)
+            try AVAudioSessionPatch.setSession(audioSession, category: .playAndRecord, with: [.defaultToSpeaker, .duckOthers])
+
             audioPlayer.play()
             thisSong = indexPath.row
             audioStuffed = true

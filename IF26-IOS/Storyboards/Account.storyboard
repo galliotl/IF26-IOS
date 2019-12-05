@@ -13,7 +13,7 @@
         <!--Account-->
         <scene sceneID="vD2-I8-gtO">
             <objects>
-                <viewController id="BkF-U4-32b" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="account" id="BkF-U4-32b" customClass="AccountViewController" customModule="IF26_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qLh-IF-5DK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sat-PQ-mQn">
+                                <rect key="frame" x="155" y="535" width="69" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logout_button:" destination="BkF-U4-32b" eventType="touchUpInside" id="Usi-GB-VvX"/>
+                                    <segue destination="agQ-P3-EXa" kind="show" id="Q19-nW-70l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Mm-Li-zUk"/>
@@ -34,7 +43,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jay-Tg-jMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="9"/>
+            <point key="canvasLocation" x="68" y="8.5457271364317844"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="lUn-mm-wnw">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" id="agQ-P3-EXa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reY-t1-HSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="482"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="8Ni-ZP-xVp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="feed" storyboardName="Feed" id="9Sh-f6-lOE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWF-A4-hY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224" y="481"/>
         </scene>
     </scenes>
 </document>
