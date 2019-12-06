@@ -1,14 +1,14 @@
 //
-//  AccountViewController.swift
+//  DisconectedViewController.swift
 //  IF26-IOS
 //
-//  Created by FILIPPI Eliott on 05/12/2019.
+//  Created by FILIPPI Eliott on 06/12/2019.
 //  Copyright © 2019 if26. All rights reserved.
 //
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class DisconnectedViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +16,7 @@ class AccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func logoff(_ sender: Any) {
-        UserDefaults.standard.set(false, forKey: "status")
-        Switcher.updateRootVC()
-        print("milk is good but chocolate milk is better")
-    }
-    
-    
-    
+
     /*
     // MARK: - Navigation
 

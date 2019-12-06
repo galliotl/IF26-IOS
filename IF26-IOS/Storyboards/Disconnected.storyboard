@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rVq-Uv-h8D">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--login-->
+        <scene sceneID="lWY-7S-dju">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" referencedIdentifier="login" id="3IM-cP-UcH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aJq-bc-XRG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ScW-LP-Cb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109" y="690"/>
+        </scene>
+        <!--sign in-->
+        <scene sceneID="GZA-on-rkz">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="sign in" storyboardName="Signin" referencedIdentifier="sign in" id="UVI-6M-mWg" userLabel="sign in" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kcV-jp-X51"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwS-PR-NeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-603" y="690"/>
+        </scene>
+        <!--Disconnected View Controller-->
+        <scene sceneID="J2M-ph-p4v">
+            <objects>
+                <tabBarController storyboardIdentifier="disconnected" id="rVq-Uv-h8D" customClass="DisconnectedViewController" customModule="IF26_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bG9-Yk-L5z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3IM-cP-UcH" kind="relationship" relationship="viewControllers" id="aEZ-QW-Ej6"/>
+                        <segue destination="UVI-6M-mWg" kind="relationship" relationship="viewControllers" id="iqx-3a-ogj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdF-cj-d5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-358" y="231"/>
+        </scene>
+    </scenes>
+</document>

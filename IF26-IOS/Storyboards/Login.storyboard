@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--log in-->
         <scene sceneID="aeK-fQ-H0l">
             <objects>
                 <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kfo-0s-Nev" customClass="LoginViewController" customModule="IF26_IOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,6 +60,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vtI-3a-69V"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="log in" id="VDc-hb-jdN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acA-Le-BtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

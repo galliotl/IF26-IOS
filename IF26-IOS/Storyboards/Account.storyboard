@@ -25,13 +25,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sat-PQ-mQn">
-                                <rect key="frame" x="155" y="535" width="69" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8No-7N-fZq">
+                                <rect key="frame" x="107" y="493" width="160" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
-                                    <action selector="logout_button:" destination="BkF-U4-32b" eventType="touchUpInside" id="Usi-GB-VvX"/>
-                                    <segue destination="agQ-P3-EXa" kind="show" id="Q19-nW-70l"/>
+                                    <action selector="logoff:" destination="BkF-U4-32b" eventType="touchUpInside" id="J5x-eb-3e4"/>
+                                    <segue destination="agQ-P3-EXa" kind="show" id="RQ0-Dj-5z7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,13 +45,13 @@
             </objects>
             <point key="canvasLocation" x="68" y="8.5457271364317844"/>
         </scene>
-        <!--Login-->
+        <!--login-->
         <scene sceneID="lUn-mm-wnw">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" id="agQ-P3-EXa" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" referencedIdentifier="login" id="agQ-P3-EXa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reY-t1-HSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="482"/>
+            <point key="canvasLocation" x="67" y="480"/>
         </scene>
         <!--Feed-->
         <scene sceneID="8Ni-ZP-xVp">

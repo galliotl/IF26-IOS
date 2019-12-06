@@ -58,13 +58,21 @@
             </objects>
             <point key="canvasLocation" x="-1298" y="588"/>
         </scene>
-        <!--Login-->
-        <scene sceneID="8tr-eN-gTN">
+        <!--disconnected-->
+        <scene sceneID="fs3-6E-ztQ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" id="ooK-oB-JkR" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kxB-sN-65v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="disconnected" storyboardName="Disconnected" referencedIdentifier="disconnected" id="b1d-ki-fCU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erk-Xm-71z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1532" y="661"/>
+            <point key="canvasLocation" x="-1223" y="648"/>
+        </scene>
+        <!--login-->
+        <scene sceneID="PQo-3g-GM4">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" referencedIdentifier="login" id="pgH-C7-Wk2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fC4-Fx-Uf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1530" y="649"/>
         </scene>
     </scenes>
 </document>
