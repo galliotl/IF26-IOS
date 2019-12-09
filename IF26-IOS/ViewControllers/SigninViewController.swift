@@ -13,45 +13,53 @@ class SigninViewController: UIViewController {
 
     @IBOutlet weak var identifiant: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var firstname: UITextField!
+    @IBOutlet weak var lastname: UITextField!
+    @IBOutlet weak var alert: UILabel!
     
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-     
-        
-        
-        
+        alert.text = ""
     }
     
         
     @IBAction func signup(_ sender: UIButton) {
         
-        /*
-         print("222")
-         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-         let context = appDelegate.persistentContainer.viewContext
-         
-         let newModule = NSEntityDescription.insertNewObject(forEntityName: "Database", into:context)
-         newModule.setValue(identifiant.text, forKey:"identifiant")
-         newModule.setValue(password.text, forKey:"password")
-         
-         do {
-         try context.save()
-         print("context saved")
-         } catch  {
-         print("Erreur")
-         }
-         */
-        
+        if addToDb() {
+            signupFailed()
+        } else {
+            signupSucceded()
+        }
+                
     }
     
+    func addToDb() -> Bool {
+        
+        let context = appDelegate.persistentContainer.viewContext
+         
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into:context)
+        newUser.setValue(identifiant.text, forKey:"id")
+        newUser.setValue(password.text, forKey:"password")
+        newUser.setValue(firstname, forKey: "firstname")
+        newUser.setValue(lastname, forKey: "lastname")
+        
+        do {
+            try context.save()
+            return true
+        } catch  {
+            print("Erreur")
+            return false
+        }
+    }
     
-
- 
+    func signupFailed() {
+        alert.text = "user already exists"
+    }
     
-    
+    func signupSucceded() {
+        alert.text = "signup succeded"
+    }
     
 }
