@@ -10,25 +10,24 @@ import UIKit
 
 class Switcher {
     
-    static func updateRootVC(){
+    static func loadDisconnectedScreen(){
         
-        let status = UserDefaults.standard.bool(forKey: "status")
-        var rootVC : UIViewController?
-        
-        print(status)
-        
-        
-        if(status == true){
-            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main") as! MainViewController
-        }
-        else{
-            //rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login") as! LoginViewController
-            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "disconnected") as! DisconnectedViewController
-        }
+        let storyBoard: UIStoryboard = UIStoryboard(name: "disconnected", bundle: nil)
+        let disconnectedVC = storyBoard.instantiateViewController(withIdentifier: "DisconnectedViewController") as! DisconnectedViewController
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = rootVC
+        appDelegate.window?.rootViewController = disconnectedVC
         
+    }
+    
+    static func loadHomeScreen() {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = storyBoard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = mainVC
+
     }
     
 }

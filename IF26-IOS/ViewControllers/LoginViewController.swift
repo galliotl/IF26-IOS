@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class LoginViewController: UIViewController {
     
@@ -23,16 +22,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login_button(_ sender: UIButton) {
-        UserDefaults.standard.set(true,  forKey: "status")
-        // Switcher.updateRootVC()
+        
         if getLoginResult() {
             loginSucceded()
         } else {
             loginFailed()
         }
+        
     }
     
     func getLoginResult() -> Bool {
+        
         let typedId = id.text
         let typedPsw = password.text
         
@@ -40,24 +40,8 @@ class LoginViewController: UIViewController {
             return false
         }
         
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<UserMO>(entityName: "User")
-        
-        request.predicate = NSPredicate(format: "id = %@", typedId!)
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            let result: [UserMO] = try context.fetch(request)
-            let user = result[0]
-            if user.password == nil || user.password != typedPsw {
-                return false
-            } else {
-                return true
-            }
-        } catch {
-            print("cannot fetch the user")
-            return false
-        }
+        return LoginHelper.getInstance().loginUser(username: typedId!, pasword: typedPsw!)
+    
     }
     
     func loginFailed() {
@@ -66,5 +50,6 @@ class LoginViewController: UIViewController {
 
     func loginSucceded() {
         alert.text = "login succeded"
+        Switcher.loadHomeScreen()
     }
 }

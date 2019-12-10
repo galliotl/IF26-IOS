@@ -41,8 +41,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let audioPath = Bundle.main.path(forResource: feedsongs[indexPath.row], ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(AVAudioSession.Category.playback)
-            //try AVAudioSessionPatch.setSession(audioSession, category: .playAndRecord, with: [.defaultToSpeaker, .duckOthers])
+            try audioSession.setCategory(.playback, mode: .default)
 
             audioPlayer.play()
             thisSong = indexPath.row

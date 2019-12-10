@@ -18,9 +18,7 @@
 		364DCE51239E524000BB7558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE2F239E524000BB7558 /* Assets.xcassets */; };
 		364DCE52239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE30239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld */; };
 		364DCE53239E524000BB7558 /* AVAudioSessionPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE33239E524000BB7558 /* AVAudioSessionPatch.m */; };
-		364DCE54239E524000BB7558 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE37239E524000BB7558 /* ViewController.swift */; };
 		364DCE55239E524000BB7558 /* DisconnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE38239E524000BB7558 /* DisconnectedViewController.swift */; };
-		364DCE56239E524000BB7558 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE39239E524000BB7558 /* MainTableViewController.swift */; };
 		364DCE57239E524000BB7558 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE3A239E524000BB7558 /* MusicViewController.swift */; };
 		364DCE58239E524000BB7558 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE3B239E524000BB7558 /* MainViewController.swift */; };
 		364DCE59239E524000BB7558 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE3C239E524000BB7558 /* LoginViewController.swift */; };
@@ -41,6 +39,7 @@
 		368A4B39239ECA2B00A7B0AF /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368A4B33239ECA2B00A7B0AF /* UserMO+CoreDataProperties.swift */; };
 		AF0EE492235EF67D00158B51 /* IF26_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */; };
 		AF0EE49D235EF67E00158B51 /* IF26_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */; };
+		AF6EFAD2239F9F8400842984 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EFAD1239F9F8400842984 /* LoginHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,9 +73,7 @@
 		364DCE33239E524000BB7558 /* AVAudioSessionPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioSessionPatch.m; sourceTree = "<group>"; };
 		364DCE34239E524000BB7558 /* IF26-IOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IF26-IOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		364DCE35239E524000BB7558 /* AVAudioSessionPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioSessionPatch.h; sourceTree = "<group>"; };
-		364DCE37239E524000BB7558 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		364DCE38239E524000BB7558 /* DisconnectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisconnectedViewController.swift; sourceTree = "<group>"; };
-		364DCE39239E524000BB7558 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		364DCE3A239E524000BB7558 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		364DCE3B239E524000BB7558 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		364DCE3C239E524000BB7558 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +100,7 @@
 		AF0EE498235EF67E00158B51 /* IF26-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IF26-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IF26_IOSUITests.swift; sourceTree = "<group>"; };
 		AF0EE49E235EF67E00158B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6EFAD1239F9F8400842984 /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,9 +173,7 @@
 		364DCE36239E524000BB7558 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				364DCE37239E524000BB7558 /* ViewController.swift */,
 				364DCE38239E524000BB7558 /* DisconnectedViewController.swift */,
-				364DCE39239E524000BB7558 /* MainTableViewController.swift */,
 				364DCE3A239E524000BB7558 /* MusicViewController.swift */,
 				364DCE3B239E524000BB7558 /* MainViewController.swift */,
 				364DCE3C239E524000BB7558 /* LoginViewController.swift */,
@@ -192,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				364DCE42239E524000BB7558 /* Switcher.swift */,
+				AF6EFAD1239F9F8400842984 /* LoginHelper.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -414,13 +411,12 @@
 				364DCE57239E524000BB7558 /* MusicViewController.swift in Sources */,
 				368A4B35239ECA2B00A7B0AF /* MusicMO+CoreDataProperties.swift in Sources */,
 				368A4B36239ECA2B00A7B0AF /* FavouriteMO+CoreDataClass.swift in Sources */,
-				364DCE54239E524000BB7558 /* ViewController.swift in Sources */,
 				364DCE52239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld in Sources */,
+				AF6EFAD2239F9F8400842984 /* LoginHelper.swift in Sources */,
 				364DCE59239E524000BB7558 /* LoginViewController.swift in Sources */,
 				364DCE5B239E524000BB7558 /* AccountViewController.swift in Sources */,
 				364DCE5E239E524000BB7558 /* Switcher.swift in Sources */,
 				364DCE55239E524000BB7558 /* DisconnectedViewController.swift in Sources */,
-				364DCE56239E524000BB7558 /* MainTableViewController.swift in Sources */,
 				368A4B38239ECA2B00A7B0AF /* UserMO+CoreDataClass.swift in Sources */,
 				368A4B39239ECA2B00A7B0AF /* UserMO+CoreDataProperties.swift in Sources */,
 				368A4B37239ECA2B00A7B0AF /* FavouriteMO+CoreDataProperties.swift in Sources */,
