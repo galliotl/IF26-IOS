@@ -65,16 +65,6 @@ class SigninViewController: UIViewController {
     }
     
     func redirectToHomeScreen() {
-        
-        DispatchQueue.main.async {
-            
-            self.dismiss(animated: true, completion: nil)
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
-            mainVC.modalPresentationStyle = .fullScreen
-            self.present(mainVC, animated: true, completion: nil)
-            
-        }
-        
+        RedirectHelper.getInstance().redirectToHomeScreen()
     }
 }
