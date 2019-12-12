@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kfo-0s-Nev">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--log in-->
+        <scene sceneID="aeK-fQ-H0l">
+            <objects>
+                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kfo-0s-Nev" customClass="LoginViewController" customModule="IF26_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I2i-Xc-aJn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8S0-QV-raQ">
+                                <rect key="frame" x="16" y="193" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="YWY-An-ZCm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtX-ky-fVa">
+                                <rect key="frame" x="16" y="552" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvr-Sc-jM6">
+                                <rect key="frame" x="16" y="235" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="65E-co-ckK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RG-Yg-IWb">
+                                <rect key="frame" x="157" y="478" width="60" height="30"/>
+                                <state key="normal" title="login"/>
+                                <connections>
+                                    <action selector="login_button:" destination="kfo-0s-Nev" eventType="touchUpInside" id="4g4-gg-03R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vtI-3a-69V" firstAttribute="trailing" secondItem="GtX-ky-fVa" secondAttribute="trailing" constant="16" id="Dur-VL-PiR"/>
+                            <constraint firstItem="vtI-3a-69V" firstAttribute="trailing" secondItem="yvr-Sc-jM6" secondAttribute="trailing" constant="16" id="F9t-di-jcg"/>
+                            <constraint firstItem="8S0-QV-raQ" firstAttribute="top" secondItem="vtI-3a-69V" secondAttribute="top" constant="193" id="Kef-5i-t3T"/>
+                            <constraint firstItem="yvr-Sc-jM6" firstAttribute="top" secondItem="8S0-QV-raQ" secondAttribute="bottom" constant="8" id="Nnm-E9-piN"/>
+                            <constraint firstItem="vtI-3a-69V" firstAttribute="trailing" secondItem="8S0-QV-raQ" secondAttribute="trailing" constant="16" id="PxX-M9-Dmq"/>
+                            <constraint firstItem="9RG-Yg-IWb" firstAttribute="top" secondItem="yvr-Sc-jM6" secondAttribute="bottom" constant="209" id="QHY-kB-wQc"/>
+                            <constraint firstItem="GtX-ky-fVa" firstAttribute="top" secondItem="9RG-Yg-IWb" secondAttribute="bottom" constant="44" id="RgO-dX-IEJ"/>
+                            <constraint firstItem="yvr-Sc-jM6" firstAttribute="top" secondItem="8S0-QV-raQ" secondAttribute="bottom" constant="8" id="YPk-eq-tqV"/>
+                            <constraint firstItem="yvr-Sc-jM6" firstAttribute="leading" secondItem="vtI-3a-69V" secondAttribute="leading" constant="16" id="ZSY-dy-oyg"/>
+                            <constraint firstItem="GtX-ky-fVa" firstAttribute="leading" secondItem="vtI-3a-69V" secondAttribute="leading" constant="16" id="kZZ-tY-jnG"/>
+                            <constraint firstItem="9RG-Yg-IWb" firstAttribute="leading" secondItem="vtI-3a-69V" secondAttribute="leading" constant="157" id="lKg-Og-5lg"/>
+                            <constraint firstItem="GtX-ky-fVa" firstAttribute="top" secondItem="9RG-Yg-IWb" secondAttribute="bottom" constant="44" id="lfU-Ig-lta"/>
+                            <constraint firstItem="9RG-Yg-IWb" firstAttribute="top" secondItem="yvr-Sc-jM6" secondAttribute="bottom" constant="209" id="mRb-56-WIt"/>
+                            <constraint firstItem="8S0-QV-raQ" firstAttribute="leading" secondItem="vtI-3a-69V" secondAttribute="leading" constant="16" id="nhM-ig-k2h"/>
+                            <constraint firstItem="vtI-3a-69V" firstAttribute="bottom" secondItem="GtX-ky-fVa" secondAttribute="bottom" constant="45" id="ucZ-Ee-Gif"/>
+                            <constraint firstItem="vtI-3a-69V" firstAttribute="trailing" secondItem="9RG-Yg-IWb" secondAttribute="trailing" constant="158" id="vEa-SN-vuY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vtI-3a-69V"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="log in" id="VDc-hb-jdN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="alert" destination="GtX-ky-fVa" id="K9z-Xc-2CM"/>
+                        <outlet property="id" destination="8S0-QV-raQ" id="4Za-wk-ylF"/>
+                        <outlet property="password" destination="yvr-Sc-jM6" id="wKc-6h-tNB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acA-Le-BtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="41.829085457271368"/>
+        </scene>
+        <!--feed-->
+        <scene sceneID="pgC-no-XBA">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="feed" storyboardName="Feed" referencedIdentifier="feed" id="HV2-gl-jAA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2v-ID-lW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="448"/>
+        </scene>
+    </scenes>
+</document>
