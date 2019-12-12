@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Database" representedClassName="Database" syncable="YES" codeGenerationType="class">
-        <attribute name="password" optional="YES" attributeType="String"/>
-        <attribute name="username" optional="YES" attributeType="String"/>
-    </entity>
     <entity name="Favourite" representedClassName=".FavouriteMO" syncable="YES">
         <attribute name="fid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="mid" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Music" inverseName="fav" inverseEntity="Music"/>
@@ -27,7 +23,6 @@
         <relationship name="music" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Music" inverseName="artistId" inverseEntity="Music"/>
     </entity>
     <elements>
-        <element name="Database" positionX="-375.0078125" positionY="-529.72265625" width="128" height="75"/>
         <element name="Favourite" positionX="-227.8125" positionY="-261.828125" width="128" height="88"/>
         <element name="Music" positionX="-583.50390625" positionY="-321.98828125" width="128" height="133"/>
         <element name="User" positionX="-382.5625" positionY="-413.2109375" width="128" height="148"/>
