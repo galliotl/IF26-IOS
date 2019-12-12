@@ -22,7 +22,6 @@ extension UserMO {
     @NSManaged public var password: String?
     @NSManaged public var picPath: String?
     @NSManaged public var uid: String?
-    @NSManaged public var fav: FavouriteMO?
     @NSManaged public var musics: NSSet?
 
 }

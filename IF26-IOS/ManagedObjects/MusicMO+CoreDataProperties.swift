@@ -17,7 +17,7 @@ extension MusicMO {
         return NSFetchRequest<MusicMO>(entityName: "Music")
     }
 
-    @NSManaged public var id: String?
+    @NSManaged public var mid: String?
     @NSManaged public var path: String?
     @NSManaged public var picPath: String?
     @NSManaged public var title: String?

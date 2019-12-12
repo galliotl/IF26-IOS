@@ -29,6 +29,7 @@ class LoginHelper {
     
     func loginUser(username: String, password: String) -> Bool {
         let context = appDelegate.persistentContainer.viewContext
+        
         let request = NSFetchRequest<UserMO>(entityName: "User")
         
         request.predicate = NSPredicate(format: "uid == %@", username)
