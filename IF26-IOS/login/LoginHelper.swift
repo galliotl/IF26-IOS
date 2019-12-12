@@ -37,9 +37,7 @@ class LoginHelper {
         
         do {
             let result: [UserMO] = try context.fetch(request)
-            
-            print(result)
-            
+                        
             if result.isEmpty {
                 return false
             }

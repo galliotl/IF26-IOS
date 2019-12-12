@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36410CE023A29C8D00F9BA29 /* FavouriteMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CDA23A29C8D00F9BA29 /* FavouriteMO+CoreDataClass.swift */; };
-		36410CE123A29C8D00F9BA29 /* FavouriteMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CDB23A29C8D00F9BA29 /* FavouriteMO+CoreDataProperties.swift */; };
-		36410CE223A29C8D00F9BA29 /* MusicMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CDC23A29C8D00F9BA29 /* MusicMO+CoreDataClass.swift */; };
-		36410CE323A29C8D00F9BA29 /* MusicMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CDD23A29C8D00F9BA29 /* MusicMO+CoreDataProperties.swift */; };
-		36410CE423A29C8D00F9BA29 /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CDE23A29C8D00F9BA29 /* UserMO+CoreDataClass.swift */; };
-		36410CE523A29C8D00F9BA29 /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CDF23A29C8D00F9BA29 /* UserMO+CoreDataProperties.swift */; };
 		36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CE623A29E8200F9BA29 /* RedirectHelper.swift */; };
+		36410CF323A2A5E700F9BA29 /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CED23A2A5E700F9BA29 /* UserMO+CoreDataProperties.swift */; };
+		36410CF423A2A5E700F9BA29 /* FavouriteMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CEE23A2A5E700F9BA29 /* FavouriteMO+CoreDataClass.swift */; };
+		36410CF523A2A5E700F9BA29 /* MusicMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CEF23A2A5E700F9BA29 /* MusicMO+CoreDataProperties.swift */; };
+		36410CF623A2A5E700F9BA29 /* FavouriteMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CF023A2A5E700F9BA29 /* FavouriteMO+CoreDataProperties.swift */; };
+		36410CF723A2A5E700F9BA29 /* MusicMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CF123A2A5E700F9BA29 /* MusicMO+CoreDataClass.swift */; };
+		36410CF823A2A5E700F9BA29 /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CF223A2A5E700F9BA29 /* UserMO+CoreDataClass.swift */; };
 		364DCE49239E524000BB7558 /* Disconnected.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE25239E524000BB7558 /* Disconnected.storyboard */; };
 		364DCE4A239E524000BB7558 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE26239E524000BB7558 /* Feed.storyboard */; };
 		364DCE4B239E524000BB7558 /* Music.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE27239E524000BB7558 /* Music.storyboard */; };
@@ -59,13 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36410CDA23A29C8D00F9BA29 /* FavouriteMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavouriteMO+CoreDataClass.swift"; path = "../../FavouriteMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		36410CDB23A29C8D00F9BA29 /* FavouriteMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FavouriteMO+CoreDataProperties.swift"; path = "../../FavouriteMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		36410CDC23A29C8D00F9BA29 /* MusicMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MusicMO+CoreDataClass.swift"; path = "../../MusicMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		36410CDD23A29C8D00F9BA29 /* MusicMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MusicMO+CoreDataProperties.swift"; path = "../../MusicMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		36410CDE23A29C8D00F9BA29 /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserMO+CoreDataClass.swift"; path = "../../UserMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		36410CDF23A29C8D00F9BA29 /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserMO+CoreDataProperties.swift"; path = "../../UserMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		36410CE623A29E8200F9BA29 /* RedirectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectHelper.swift; sourceTree = "<group>"; };
+		36410CED23A2A5E700F9BA29 /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36410CEE23A2A5E700F9BA29 /* FavouriteMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouriteMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36410CEF23A2A5E700F9BA29 /* MusicMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36410CF023A2A5E700F9BA29 /* FavouriteMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouriteMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36410CF123A2A5E700F9BA29 /* MusicMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MusicMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36410CF223A2A5E700F9BA29 /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		364DCE25239E524000BB7558 /* Disconnected.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Disconnected.storyboard; sourceTree = "<group>"; };
 		364DCE26239E524000BB7558 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		364DCE27239E524000BB7558 /* Music.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Music.storyboard; sourceTree = "<group>"; };
@@ -192,12 +192,12 @@
 		368A4B2B239EC49900A7B0AF /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				36410CDA23A29C8D00F9BA29 /* FavouriteMO+CoreDataClass.swift */,
-				36410CDB23A29C8D00F9BA29 /* FavouriteMO+CoreDataProperties.swift */,
-				36410CDC23A29C8D00F9BA29 /* MusicMO+CoreDataClass.swift */,
-				36410CDD23A29C8D00F9BA29 /* MusicMO+CoreDataProperties.swift */,
-				36410CDE23A29C8D00F9BA29 /* UserMO+CoreDataClass.swift */,
-				36410CDF23A29C8D00F9BA29 /* UserMO+CoreDataProperties.swift */,
+				36410CEE23A2A5E700F9BA29 /* FavouriteMO+CoreDataClass.swift */,
+				36410CF023A2A5E700F9BA29 /* FavouriteMO+CoreDataProperties.swift */,
+				36410CF123A2A5E700F9BA29 /* MusicMO+CoreDataClass.swift */,
+				36410CEF23A2A5E700F9BA29 /* MusicMO+CoreDataProperties.swift */,
+				36410CF223A2A5E700F9BA29 /* UserMO+CoreDataClass.swift */,
+				36410CED23A2A5E700F9BA29 /* UserMO+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -389,23 +389,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36410CE523A29C8D00F9BA29 /* UserMO+CoreDataProperties.swift in Sources */,
-				36410CE223A29C8D00F9BA29 /* MusicMO+CoreDataClass.swift in Sources */,
-				36410CE023A29C8D00F9BA29 /* FavouriteMO+CoreDataClass.swift in Sources */,
-				36410CE323A29C8D00F9BA29 /* MusicMO+CoreDataProperties.swift in Sources */,
 				364DCE5D239E524000BB7558 /* AppDelegate.swift in Sources */,
 				364DCE58239E524000BB7558 /* MainViewController.swift in Sources */,
+				36410CF523A2A5E700F9BA29 /* MusicMO+CoreDataProperties.swift in Sources */,
 				36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */,
-				36410CE123A29C8D00F9BA29 /* FavouriteMO+CoreDataProperties.swift in Sources */,
 				364DCE5A239E524000BB7558 /* FeedViewController.swift in Sources */,
+				36410CF323A2A5E700F9BA29 /* UserMO+CoreDataProperties.swift in Sources */,
 				364DCE5C239E524000BB7558 /* SigninViewController.swift in Sources */,
-				36410CE423A29C8D00F9BA29 /* UserMO+CoreDataClass.swift in Sources */,
+				36410CF723A2A5E700F9BA29 /* MusicMO+CoreDataClass.swift in Sources */,
 				364DCE57239E524000BB7558 /* MusicViewController.swift in Sources */,
 				364DCE52239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld in Sources */,
+				36410CF423A2A5E700F9BA29 /* FavouriteMO+CoreDataClass.swift in Sources */,
 				AF6EFAD2239F9F8400842984 /* LoginHelper.swift in Sources */,
 				364DCE59239E524000BB7558 /* LoginViewController.swift in Sources */,
+				36410CF623A2A5E700F9BA29 /* FavouriteMO+CoreDataProperties.swift in Sources */,
 				364DCE5B239E524000BB7558 /* AccountViewController.swift in Sources */,
 				364DCE55239E524000BB7558 /* DisconnectedViewController.swift in Sources */,
+				36410CF823A2A5E700F9BA29 /* UserMO+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
