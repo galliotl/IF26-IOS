@@ -2,7 +2,7 @@
 //  MusicMO+CoreDataProperties.swift
 //  IF26-IOS
 //
-//  Created by Laura Haegel on 09/12/2019.
+//  Created by Laura Haegel on 12/12/2019.
 //  Copyright © 2019 if26. All rights reserved.
 //
 //
@@ -17,11 +17,28 @@ extension MusicMO {
         return NSFetchRequest<MusicMO>(entityName: "Music")
     }
 
-    @NSManaged public var id: Int16
+    @NSManaged public var id: String?
     @NSManaged public var path: String?
     @NSManaged public var picPath: String?
     @NSManaged public var title: String?
     @NSManaged public var artistId: UserMO?
-    @NSManaged public var fav: FavouriteMO?
+    @NSManaged public var favs: NSSet?
+
+}
+
+// MARK: Generated accessors for favs
+extension MusicMO {
+
+    @objc(addFavsObject:)
+    @NSManaged public func addToFavs(_ value: FavouriteMO)
+
+    @objc(removeFavsObject:)
+    @NSManaged public func removeFromFavs(_ value: FavouriteMO)
+
+    @objc(addFavs:)
+    @NSManaged public func addToFavs(_ values: NSSet)
+
+    @objc(removeFavs:)
+    @NSManaged public func removeFromFavs(_ values: NSSet)
 
 }

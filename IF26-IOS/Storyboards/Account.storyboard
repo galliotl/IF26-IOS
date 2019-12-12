@@ -27,7 +27,6 @@
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logoff:" destination="BkF-U4-32b" eventType="touchUpInside" id="J5x-eb-3e4"/>
-                                    <segue destination="agQ-P3-EXa" kind="show" id="RQ0-Dj-5z7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,14 +48,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jay-Tg-jMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="68" y="8.5457271364317844"/>
-        </scene>
-        <!--login-->
-        <scene sceneID="lUn-mm-wnw">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" referencedIdentifier="login" id="agQ-P3-EXa" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="reY-t1-HSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="67" y="480"/>
         </scene>
     </scenes>
 </document>

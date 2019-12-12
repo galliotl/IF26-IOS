@@ -17,7 +17,24 @@ class AccountViewController: UIViewController {
     
     
     @IBAction func logoff(_ sender: Any) {
-        Switcher.loadDisconnectedScreen()
+        
+        LoginHelper.getInstance().logoutUser()
+        redirectUserToLoginScreen()
+        
     }
 
+    func redirectUserToLoginScreen() {
+        
+        DispatchQueue.main.async {
+            
+            self.dismiss(animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Disconnected", bundle: nil)
+            let disconnectedVC = storyboard.instantiateViewController(withIdentifier: "disconnected") as! DisconnectedViewController
+            disconnectedVC.modalPresentationStyle = .fullScreen
+            self.present(disconnectedVC, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
 }

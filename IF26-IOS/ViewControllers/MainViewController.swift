@@ -15,9 +15,7 @@ class MainViewController: UITabBarController {
         
         if isUserConnected() == false {
             
-            // redirect to disconnected screen
-            print("user is going to be redirected")
-            Switcher.loadDisconnectedScreen()
+            redirectUserToLoginScreen()
             
         }
     }
@@ -27,6 +25,20 @@ class MainViewController: UITabBarController {
         let connectedUser = LoginHelper.getInstance().getConnectedUserId()
         return connectedUser != nil && connectedUser != ""
     
+    }
+    
+    func redirectUserToLoginScreen() {
+        
+        DispatchQueue.main.async {
+            
+            self.dismiss(animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Disconnected", bundle: nil)
+            let disconnectedVC = storyboard.instantiateViewController(withIdentifier: "disconnected") as! DisconnectedViewController
+            disconnectedVC.modalPresentationStyle = .fullScreen
+            self.present(disconnectedVC, animated: true, completion: nil)
+            
+        }
+        
     }
 
 }

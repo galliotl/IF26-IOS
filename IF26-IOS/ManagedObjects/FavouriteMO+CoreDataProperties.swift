@@ -2,7 +2,7 @@
 //  FavouriteMO+CoreDataProperties.swift
 //  IF26-IOS
 //
-//  Created by Laura Haegel on 09/12/2019.
+//  Created by Laura Haegel on 12/12/2019.
 //  Copyright © 2019 if26. All rights reserved.
 //
 //
@@ -17,7 +17,7 @@ extension FavouriteMO {
         return NSFetchRequest<FavouriteMO>(entityName: "Favourite")
     }
 
-    @NSManaged public var fid: Int16
+    @NSManaged public var fid: String?
     @NSManaged public var mid: MusicMO?
     @NSManaged public var uid: UserMO?
 

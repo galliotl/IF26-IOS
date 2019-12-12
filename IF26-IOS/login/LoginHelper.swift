@@ -27,27 +27,60 @@ class LoginHelper {
         return UserDefaults.standard.string(forKey: "connectedUser")
     }
     
-    func loginUser(username: String, pasword: String) -> Bool {
+    func loginUser(username: String, password: String) -> Bool {
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<UserMO>(entityName: "User")
         
-        request.predicate = NSPredicate(format: "id == %@", username)
+        request.predicate = NSPredicate(format: "uid == %@", username)
         request.returnsObjectsAsFaults = false
         
         do {
             let result: [UserMO] = try context.fetch(request)
+            
+            if result.isEmpty {
+                return false
+            }
+            
             let user = result[0]
             
-            if user.password == nil || user.password != pasword {
+            if user.password == nil || user.password != password {
                 return false
             } else {
-                UserDefaults.standard.set(user.uid, forKey: "connectedUser")
+                setConnectedUser(uid: username)
                 return true
             }
         } catch {
             print("cannot fetch the user")
             return false
         }
+    }
+    
+    func signupUser(uid: String, psw: String, lastname: String, firstname: String) -> Bool {
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! UserMO
+        newUser.setValue(uid, forKey: "uid")
+        newUser.setValue(psw, forKey: "password")
+        newUser.setValue(lastname, forKey: "lastName")
+        newUser.setValue(firstname, forKey: "firstName")
+        
+        do {
+            try context.save()
+            setConnectedUser(uid: uid)
+            return true
+        } catch {
+            return false
+        }
+        
+    }
+    
+    func logoutUser() {
+        UserDefaults.standard.removeObject(forKey: "connectedUser")
+    }
+    
+    func setConnectedUser(uid: String) {
+        UserDefaults.standard.set(uid, forKey: "connectedUser")
     }
     
 }

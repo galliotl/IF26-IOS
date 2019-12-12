@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class SigninViewController: UIViewController {
 
@@ -28,38 +27,54 @@ class SigninViewController: UIViewController {
     @IBAction func signup(_ sender: UIButton) {
         
         if addToDb() {
-            signupFailed()
-        } else {
             signupSucceded()
+        } else {
+            signupFailed()
         }
                 
     }
     
     func addToDb() -> Bool {
         
-        let context = appDelegate.persistentContainer.viewContext
-         
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into:context)
-        newUser.setValue(identifiant.text, forKey:"id")
-        newUser.setValue(password.text, forKey:"password")
-        newUser.setValue(firstname, forKey: "firstname")
-        newUser.setValue(lastname, forKey: "lastname")
-        
-        do {
-            try context.save()
-            return true
-        } catch  {
-            print("Erreur")
+        guard let uid = identifiant.text, !uid.isEmpty else {
             return false
         }
+        
+        guard let psw = password.text, !psw.isEmpty else {
+            return false
+        }
+        
+        guard let firstname = self.firstname.text, !firstname.isEmpty else {
+            return false
+        }
+        
+        guard let lastname = self.firstname.text, !lastname.isEmpty else {
+            return false
+        }
+        
+        return LoginHelper.getInstance().signupUser(uid: uid, psw: psw, lastname: lastname, firstname: firstname)
     }
     
     func signupFailed() {
-        alert.text = "user already exists"
+        alert.text = "signup failed"
     }
     
     func signupSucceded() {
         alert.text = "signup succeded"
+        redirectToHomeScreen()
     }
     
+    func redirectToHomeScreen() {
+        
+        DispatchQueue.main.async {
+            
+            self.dismiss(animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! MainViewController
+            mainVC.modalPresentationStyle = .fullScreen
+            self.present(mainVC, animated: true, completion: nil)
+            
+        }
+        
+    }
 }

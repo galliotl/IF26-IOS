@@ -33,14 +33,14 @@ class LoginViewController: UIViewController {
     
     func getLoginResult() -> Bool {
         
-        let typedId = id.text
-        let typedPsw = password.text
-        
-        if typedId == nil || typedPsw == nil {
+        guard let typedId = id.text, !typedId.isEmpty else {
+            return false
+        }
+        guard let typedPsw = password.text, !typedPsw.isEmpty  else {
             return false
         }
         
-        return LoginHelper.getInstance().loginUser(username: typedId!, pasword: typedPsw!)
+        return LoginHelper.getInstance().loginUser(username: typedId, password: typedPsw)
     
     }
     
@@ -50,6 +50,5 @@ class LoginViewController: UIViewController {
 
     func loginSucceded() {
         alert.text = "login succeded"
-        Switcher.loadHomeScreen()
     }
 }
