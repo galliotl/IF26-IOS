@@ -12,7 +12,7 @@ import CoreData
 class LoginHelper {
     
     static var instance: LoginHelper? = nil
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var coreDataStack = CoreDataStack(){ }
 
     private init() {}
     
@@ -28,7 +28,6 @@ class LoginHelper {
     }
     
     func loginUser(username: String, password: String) -> Bool {
-        let context = appDelegate.persistentContainer.viewContext
         
         let request = NSFetchRequest<UserMO>(entityName: "User")
         
@@ -36,7 +35,7 @@ class LoginHelper {
         request.returnsObjectsAsFaults = false
         
         do {
-            let result: [UserMO] = try context.fetch(request)
+            let result: [UserMO] = try coreDataStack.managedObjectContext.fetch(request)
                         
             if result.isEmpty {
                 return false
@@ -57,17 +56,15 @@ class LoginHelper {
     }
     
     func signupUser(uid: String, psw: String, lastname: String, firstname: String) -> Bool {
-        
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! UserMO
+                
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataStack.managedObjectContext) as! UserMO
         newUser.setValue(uid, forKey: "uid")
         newUser.setValue(psw, forKey: "password")
         newUser.setValue(lastname, forKey: "lastName")
         newUser.setValue(firstname, forKey: "firstName")
         
         do {
-            try context.save()
+            try coreDataStack.managedObjectContext.save()
             setConnectedUser(uid: uid)
             return true
         } catch {

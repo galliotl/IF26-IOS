@@ -16,34 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPs-lz-Fk8">
-                                <rect key="frame" x="155" y="323" width="64" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPs-lz-Fk8">
+                                <rect key="frame" x="16" y="242" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8No-7N-fZq">
-                                <rect key="frame" x="107" y="493" width="160" height="30"/>
+                                <rect key="frame" x="304" y="20" width="55" height="30"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logoff:" destination="BkF-U4-32b" eventType="touchUpInside" id="J5x-eb-3e4"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-Z3-u4e">
+                                <rect key="frame" x="138" y="90" width="98" height="97"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-u1-9n1">
+                                <rect key="frame" x="16" y="20" width="79" height="30"/>
+                                <state key="normal" title="Delete user"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8No-7N-fZq" firstAttribute="leading" secondItem="8Mm-Li-zUk" secondAttribute="leading" constant="107" id="D0v-hw-g9N"/>
-                            <constraint firstItem="8No-7N-fZq" firstAttribute="top" secondItem="SPs-lz-Fk8" secondAttribute="bottom" constant="149" id="Oh4-Yx-KUB"/>
-                            <constraint firstItem="8Mm-Li-zUk" firstAttribute="bottom" secondItem="8No-7N-fZq" secondAttribute="bottom" constant="95" id="ZV0-Cb-DzA"/>
-                            <constraint firstItem="8Mm-Li-zUk" firstAttribute="trailing" secondItem="SPs-lz-Fk8" secondAttribute="trailing" constant="156" id="d4V-xB-7Dg"/>
-                            <constraint firstItem="SPs-lz-Fk8" firstAttribute="top" secondItem="8Mm-Li-zUk" secondAttribute="top" constant="323" id="tcs-hd-y85"/>
-                            <constraint firstItem="8Mm-Li-zUk" firstAttribute="trailing" secondItem="8No-7N-fZq" secondAttribute="trailing" constant="108" id="uHS-kW-BVi"/>
-                            <constraint firstItem="SPs-lz-Fk8" firstAttribute="leading" secondItem="8Mm-Li-zUk" secondAttribute="leading" constant="155" id="vGm-3j-bMr"/>
+                            <constraint firstItem="SPs-lz-Fk8" firstAttribute="top" secondItem="g9b-Z3-u4e" secondAttribute="bottom" constant="55" id="6VV-g2-nzL"/>
+                            <constraint firstItem="lh6-u1-9n1" firstAttribute="top" secondItem="8Mm-Li-zUk" secondAttribute="top" constant="20" id="G1N-jp-4lt"/>
+                            <constraint firstItem="lh6-u1-9n1" firstAttribute="leading" secondItem="8Mm-Li-zUk" secondAttribute="leading" constant="16" id="Hug-iY-HDC"/>
+                            <constraint firstItem="8Mm-Li-zUk" firstAttribute="bottom" secondItem="SPs-lz-Fk8" secondAttribute="bottom" constant="355" id="Uc6-Ij-C8D"/>
+                            <constraint firstItem="8Mm-Li-zUk" firstAttribute="trailing" secondItem="8No-7N-fZq" secondAttribute="trailing" constant="16" id="UeT-IS-Voy"/>
+                            <constraint firstItem="SPs-lz-Fk8" firstAttribute="top" secondItem="g9b-Z3-u4e" secondAttribute="bottom" constant="55" id="Vn4-Fv-Pnv"/>
+                            <constraint firstItem="SPs-lz-Fk8" firstAttribute="leading" secondItem="8Mm-Li-zUk" secondAttribute="leading" constant="16" id="YqS-1X-Tc1"/>
+                            <constraint firstItem="8No-7N-fZq" firstAttribute="top" secondItem="8Mm-Li-zUk" secondAttribute="top" constant="20" id="jpw-Is-dWi"/>
+                            <constraint firstItem="g9b-Z3-u4e" firstAttribute="leading" secondItem="8Mm-Li-zUk" secondAttribute="leading" constant="138" id="klf-1t-642"/>
+                            <constraint firstItem="8Mm-Li-zUk" firstAttribute="trailing" secondItem="SPs-lz-Fk8" secondAttribute="trailing" constant="16" id="mW6-Uj-I5w"/>
+                            <constraint firstItem="8Mm-Li-zUk" firstAttribute="trailing" secondItem="g9b-Z3-u4e" secondAttribute="trailing" constant="139" id="w63-OI-uid"/>
+                            <constraint firstItem="g9b-Z3-u4e" firstAttribute="top" secondItem="8Mm-Li-zUk" secondAttribute="top" constant="90" id="wmu-QG-JGJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Mm-Li-zUk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="keb-4k-XFr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="userLabel" destination="SPs-lz-Fk8" id="Bu8-hf-gYB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jay-Tg-jMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

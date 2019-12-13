@@ -2,7 +2,7 @@
 //  UserMO+CoreDataProperties.swift
 //  IF26-IOS
 //
-//  Created by Laura Haegel on 12/12/2019.
+//  Created by Laura Haegel on 13/12/2019.
 //  Copyright © 2019 if26. All rights reserved.
 //
 //
@@ -22,7 +22,25 @@ extension UserMO {
     @NSManaged public var password: String?
     @NSManaged public var picPath: String?
     @NSManaged public var uid: String?
+    @NSManaged public var favs: NSSet?
     @NSManaged public var musics: NSSet?
+
+}
+
+// MARK: Generated accessors for favs
+extension UserMO {
+
+    @objc(addFavsObject:)
+    @NSManaged public func addToFavs(_ value: FavouriteMO)
+
+    @objc(removeFavsObject:)
+    @NSManaged public func removeFromFavs(_ value: FavouriteMO)
+
+    @objc(addFavs:)
+    @NSManaged public func addToFavs(_ values: NSSet)
+
+    @objc(removeFavs:)
+    @NSManaged public func removeFromFavs(_ values: NSSet)
 
 }
 
