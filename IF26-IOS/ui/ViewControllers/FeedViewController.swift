@@ -7,13 +7,8 @@
 //
 
 import UIKit
-import AVFoundation
 
-
-var audioPlayer = AVAudioPlayer()
 var feedsongs:[String] = []
-var thisSong = 0
-var audioStuffed = false
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -30,27 +25,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "feedcell")
-        cell.textLabel?.text = feedsongs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feedcell", for: indexPath) as! MusicCell
+        cell.title?.text = feedsongs[indexPath.row]
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        do
-        {
-            let audioPath = Bundle.main.path(forResource: feedsongs[indexPath.row], ofType: ".mp3")
-            try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.playback, mode: .default)
-
-            audioPlayer.play()
-            thisSong = indexPath.row
-            audioStuffed = true
-        }
-        catch
-        {
-            print ("ERROR playing data")
-        }
+        
+        // create new playlist from current position 'til the end of the playlist
+        let playlist: [String] = Array(feedsongs[indexPath.row...])
+        
+        
+        MusicService.getInstance().playPlaylist(playlist: playlist)
+        
     }
 
     func gettingSongNames() {
