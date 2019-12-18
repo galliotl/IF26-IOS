@@ -13,7 +13,7 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var userLabel: UILabel!
     
-    var userData: UserMO? = nil
+    var userData: User? = nil
     var coreDataStack = CoreDataStack() { }
     
     override func viewDidLoad() {
@@ -38,14 +38,14 @@ class AccountViewController: UIViewController {
             redirectUserToLoginScreen()
             return
         }
-        let request = NSFetchRequest<UserMO>(entityName: "User")
+        let request = NSFetchRequest<User>(entityName: "User")
         
         request.predicate = NSPredicate(format: "uid == %@", userId)
         request.returnsObjectsAsFaults = false
         
         do {
             
-            let result: [UserMO] = try coreDataStack.managedObjectContext.fetch(request)
+            let result: [User] = try coreDataStack.managedObjectContext.fetch(request)
                         
             if result.isEmpty {
                 redirectUserToLoginScreen()

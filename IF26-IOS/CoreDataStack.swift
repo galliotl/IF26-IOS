@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 class CoreDataStack: NSObject {
-    static let moduleName = "IF26-IOS_coredata"
+    static let moduleName = "IF26_coredata"
     
     var managedObjectContext: NSManagedObjectContext
     
@@ -37,7 +37,10 @@ class CoreDataStack: NSObject {
             }
             
             let storeURL = docURL.appendingPathComponent("\(CoreDataStack.moduleName).sqlite")
-            let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
+            let options = [
+                NSMigratePersistentStoresAutomaticallyOption: true,
+                NSInferMappingModelAutomaticallyOption: true,
+            ]
 
             do {
                 try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: options)

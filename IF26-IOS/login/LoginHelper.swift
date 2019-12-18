@@ -29,13 +29,13 @@ class LoginHelper {
     
     func loginUser(username: String, password: String) -> Bool {
         
-        let request = NSFetchRequest<UserMO>(entityName: "User")
+        let request = NSFetchRequest<User>(entityName: "User")
         
         request.predicate = NSPredicate(format: "uid == %@", username)
         request.returnsObjectsAsFaults = false
         
         do {
-            let result: [UserMO] = try coreDataStack.managedObjectContext.fetch(request)
+            let result: [User] = try coreDataStack.managedObjectContext.fetch(request)
                         
             if result.isEmpty {
                 return false
@@ -57,7 +57,7 @@ class LoginHelper {
     
     func signupUser(uid: String, psw: String, lastname: String, firstname: String) -> Bool {
                 
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataStack.managedObjectContext) as! UserMO
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataStack.managedObjectContext) as! User
         newUser.setValue(uid, forKey: "uid")
         newUser.setValue(psw, forKey: "password")
         newUser.setValue(lastname, forKey: "lastName")

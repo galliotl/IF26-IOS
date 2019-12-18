@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360283DE23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 360283DC23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld */; };
 		36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CE623A29E8200F9BA29 /* RedirectHelper.swift */; };
 		364DCE49239E524000BB7558 /* Disconnected.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE25239E524000BB7558 /* Disconnected.storyboard */; };
 		364DCE4A239E524000BB7558 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE26239E524000BB7558 /* Feed.storyboard */; };
@@ -17,7 +18,6 @@
 		364DCE4F239E524000BB7558 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE2D239E524000BB7558 /* Signin.storyboard */; };
 		364DCE50239E524000BB7558 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE2E239E524000BB7558 /* Account.storyboard */; };
 		364DCE51239E524000BB7558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE2F239E524000BB7558 /* Assets.xcassets */; };
-		364DCE52239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE30239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld */; };
 		364DCE55239E524000BB7558 /* DisconnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE38239E524000BB7558 /* DisconnectedViewController.swift */; };
 		364DCE57239E524000BB7558 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE3A239E524000BB7558 /* MusicViewController.swift */; };
 		364DCE58239E524000BB7558 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DCE3B239E524000BB7558 /* MainViewController.swift */; };
@@ -31,12 +31,6 @@
 		364DCE62239E524000BB7558 /* bensound-creativeminds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE47239E524000BB7558 /* bensound-creativeminds.mp3 */; };
 		364DCE63239E524000BB7558 /* bensound-ukulele.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE48239E524000BB7558 /* bensound-ukulele.mp3 */; };
 		36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */; };
-		36AE8BD523A3C25700332DEC /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BCF23A3C25700332DEC /* UserMO+CoreDataClass.swift */; };
-		36AE8BD623A3C25700332DEC /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BD023A3C25700332DEC /* UserMO+CoreDataProperties.swift */; };
-		36AE8BD723A3C25700332DEC /* MusicMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BD123A3C25700332DEC /* MusicMO+CoreDataClass.swift */; };
-		36AE8BD823A3C25700332DEC /* MusicMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BD223A3C25700332DEC /* MusicMO+CoreDataProperties.swift */; };
-		36AE8BD923A3C25700332DEC /* FavouriteMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BD323A3C25700332DEC /* FavouriteMO+CoreDataClass.swift */; };
-		36AE8BDA23A3C25700332DEC /* FavouriteMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BD423A3C25700332DEC /* FavouriteMO+CoreDataProperties.swift */; };
 		AF0EE492235EF67D00158B51 /* IF26_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */; };
 		AF0EE49D235EF67E00158B51 /* IF26_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */; };
 		AF6EFAD2239F9F8400842984 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EFAD1239F9F8400842984 /* LoginHelper.swift */; };
@@ -60,6 +54,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360283DD23AAAAA500D8E232 /* IF26_coredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IF26_coredata.xcdatamodel; sourceTree = "<group>"; };
+		360283DF23AAACDE00D8E232 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		360283E023AAACDE00D8E232 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		360283E123AAACDE00D8E232 /* Favourite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		360283E223AAACDE00D8E232 /* Favourite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		360283E323AAACDE00D8E232 /* Music+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		360283E423AAACDE00D8E232 /* Music+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		360283EB23AAADB600D8E232 /* IF26_coredata v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "IF26_coredata v2.xcdatamodel"; sourceTree = "<group>"; };
 		36410CE623A29E8200F9BA29 /* RedirectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectHelper.swift; sourceTree = "<group>"; };
 		364DCE25239E524000BB7558 /* Disconnected.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Disconnected.storyboard; sourceTree = "<group>"; };
 		364DCE26239E524000BB7558 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
@@ -70,7 +72,6 @@
 		364DCE2D239E524000BB7558 /* Signin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		364DCE2E239E524000BB7558 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		364DCE2F239E524000BB7558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		364DCE31239E524000BB7558 /* IF26-IOS_coredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "IF26-IOS_coredata.xcdatamodel"; sourceTree = "<group>"; };
 		364DCE38239E524000BB7558 /* DisconnectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisconnectedViewController.swift; sourceTree = "<group>"; };
 		364DCE3A239E524000BB7558 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		364DCE3B239E524000BB7558 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -85,13 +86,6 @@
 		364DCE47239E524000BB7558 /* bensound-creativeminds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-creativeminds.mp3"; sourceTree = "<group>"; };
 		364DCE48239E524000BB7558 /* bensound-ukulele.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-ukulele.mp3"; sourceTree = "<group>"; };
 		36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		36AE8BCE23A3C19100332DEC /* IF26-IOS_coredata v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "IF26-IOS_coredata v2.xcdatamodel"; sourceTree = "<group>"; };
-		36AE8BCF23A3C25700332DEC /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		36AE8BD023A3C25700332DEC /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		36AE8BD123A3C25700332DEC /* MusicMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MusicMO+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		36AE8BD223A3C25700332DEC /* MusicMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MusicMO+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		36AE8BD323A3C25700332DEC /* FavouriteMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouriteMO+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		36AE8BD423A3C25700332DEC /* FavouriteMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouriteMO+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AF0EE479235EF67800158B51 /* IF26-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IF26-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE48D235EF67D00158B51 /* IF26-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IF26-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IF26_IOSTests.swift; sourceTree = "<group>"; };
@@ -133,7 +127,6 @@
 				368A4B2B239EC49900A7B0AF /* ManagedObjects */,
 				364DCE24239E524000BB7558 /* Storyboards */,
 				364DCE2F239E524000BB7558 /* Assets.xcassets */,
-				364DCE30239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld */,
 				364DCE36239E524000BB7558 /* ViewControllers */,
 				364DCE40239E524000BB7558 /* AppDelegate.swift */,
 				364DCE41239E524000BB7558 /* login */,
@@ -141,6 +134,7 @@
 				364DCE44239E524000BB7558 /* Musics */,
 				36410CE623A29E8200F9BA29 /* RedirectHelper.swift */,
 				36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */,
+				360283DC23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld */,
 			);
 			path = "IF26-IOS";
 			sourceTree = "<group>";
@@ -196,12 +190,12 @@
 		368A4B2B239EC49900A7B0AF /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				36AE8BCF23A3C25700332DEC /* UserMO+CoreDataClass.swift */,
-				36AE8BD023A3C25700332DEC /* UserMO+CoreDataProperties.swift */,
-				36AE8BD123A3C25700332DEC /* MusicMO+CoreDataClass.swift */,
-				36AE8BD223A3C25700332DEC /* MusicMO+CoreDataProperties.swift */,
-				36AE8BD323A3C25700332DEC /* FavouriteMO+CoreDataClass.swift */,
-				36AE8BD423A3C25700332DEC /* FavouriteMO+CoreDataProperties.swift */,
+				360283DF23AAACDE00D8E232 /* User+CoreDataClass.swift */,
+				360283E023AAACDE00D8E232 /* User+CoreDataProperties.swift */,
+				360283E123AAACDE00D8E232 /* Favourite+CoreDataClass.swift */,
+				360283E223AAACDE00D8E232 /* Favourite+CoreDataProperties.swift */,
+				360283E323AAACDE00D8E232 /* Music+CoreDataClass.swift */,
+				360283E423AAACDE00D8E232 /* Music+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -394,21 +388,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				364DCE5D239E524000BB7558 /* AppDelegate.swift in Sources */,
-				36AE8BD723A3C25700332DEC /* MusicMO+CoreDataClass.swift in Sources */,
 				364DCE58239E524000BB7558 /* MainViewController.swift in Sources */,
-				36AE8BDA23A3C25700332DEC /* FavouriteMO+CoreDataProperties.swift in Sources */,
-				36AE8BD823A3C25700332DEC /* MusicMO+CoreDataProperties.swift in Sources */,
 				36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */,
 				36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */,
 				364DCE5A239E524000BB7558 /* FeedViewController.swift in Sources */,
 				364DCE5C239E524000BB7558 /* SigninViewController.swift in Sources */,
 				364DCE57239E524000BB7558 /* MusicViewController.swift in Sources */,
-				364DCE52239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld in Sources */,
+				360283DE23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld in Sources */,
 				AF6EFAD2239F9F8400842984 /* LoginHelper.swift in Sources */,
 				364DCE59239E524000BB7558 /* LoginViewController.swift in Sources */,
-				36AE8BD923A3C25700332DEC /* FavouriteMO+CoreDataClass.swift in Sources */,
-				36AE8BD523A3C25700332DEC /* UserMO+CoreDataClass.swift in Sources */,
-				36AE8BD623A3C25700332DEC /* UserMO+CoreDataProperties.swift in Sources */,
 				364DCE5B239E524000BB7558 /* AccountViewController.swift in Sources */,
 				364DCE55239E524000BB7558 /* DisconnectedViewController.swift in Sources */,
 			);
@@ -735,14 +723,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		364DCE30239E524000BB7558 /* IF26-IOS_coredata.xcdatamodeld */ = {
+		360283DC23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				36AE8BCE23A3C19100332DEC /* IF26-IOS_coredata v2.xcdatamodel */,
-				364DCE31239E524000BB7558 /* IF26-IOS_coredata.xcdatamodel */,
+				360283EB23AAADB600D8E232 /* IF26_coredata v2.xcdatamodel */,
+				360283DD23AAAAA500D8E232 /* IF26_coredata.xcdatamodel */,
 			);
-			currentVersion = 364DCE31239E524000BB7558 /* IF26-IOS_coredata.xcdatamodel */;
-			path = "IF26-IOS_coredata.xcdatamodeld";
+			currentVersion = 360283EB23AAADB600D8E232 /* IF26_coredata v2.xcdatamodel */;
+			path = IF26_coredata.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

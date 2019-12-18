@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Favourite" representedClassName=".FavouriteMO" syncable="YES">
-        <attribute name="fid" attributeType="String"/>
+    <entity name="Favourite" representedClassName="Favourite" syncable="YES" codeGenerationType="class">
+        <attribute name="fid" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="mid" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Music" inverseName="favs" inverseEntity="Music"/>
         <relationship name="uid" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="favs" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="fid"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
-    <entity name="Music" representedClassName=".MusicMO" syncable="YES">
-        <attribute name="mid" attributeType="String"/>
-        <attribute name="path" optional="YES" attributeType="String"/>
+    <entity name="Music" representedClassName="Music" syncable="YES" codeGenerationType="class">
+        <attribute name="mid" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="path" attributeType="String"/>
         <attribute name="picPath" optional="YES" attributeType="String"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
         <relationship name="artistId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="musics" inverseEntity="User"/>
         <relationship name="favs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Favourite" inverseName="mid" inverseEntity="Favourite"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="mid"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
-    <entity name="User" representedClassName=".UserMO" syncable="YES">
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="firstName" attributeType="String"/>
         <attribute name="lastName" attributeType="String"/>
-        <attribute name="password" attributeType="String"/>
         <attribute name="picPath" optional="YES" attributeType="String"/>
         <attribute name="uid" attributeType="String"/>
         <relationship name="favs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Favourite" inverseName="uid" inverseEntity="Favourite"/>
         <relationship name="musics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Music" inverseName="artistId" inverseEntity="Music"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="uid"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Favourite" positionX="-227.8125" positionY="-261.828125" width="128" height="88"/>
-        <element name="Music" positionX="-583.50390625" positionY="-321.98828125" width="128" height="133"/>
-        <element name="User" positionX="-382.5625" positionY="-413.2109375" width="128" height="148"/>
+        <element name="User" positionX="-38.47265625" positionY="20.81640625" width="128" height="133"/>
+        <element name="Music" positionX="156.29296875" positionY="103.05078125" width="128" height="133"/>
+        <element name="Favourite" positionX="157.328125" positionY="-53.8828125" width="128" height="88"/>
     </elements>
 </model>
