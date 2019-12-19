@@ -32,6 +32,7 @@
 		364DCE61239E524000BB7558 /* bensound-anewbeginning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE46239E524000BB7558 /* bensound-anewbeginning.mp3 */; };
 		364DCE62239E524000BB7558 /* bensound-creativeminds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE47239E524000BB7558 /* bensound-creativeminds.mp3 */; };
 		364DCE63239E524000BB7558 /* bensound-ukulele.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE48239E524000BB7558 /* bensound-ukulele.mp3 */; };
+		36A3D71023AB829900486D5F /* NewMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D70F23AB829900486D5F /* NewMusicViewController.swift */; };
 		36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */; };
 		AF0EE492235EF67D00158B51 /* IF26_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */; };
 		AF0EE49D235EF67E00158B51 /* IF26_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */; };
@@ -57,12 +58,6 @@
 
 /* Begin PBXFileReference section */
 		360283DD23AAAAA500D8E232 /* IF26_coredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IF26_coredata.xcdatamodel; sourceTree = "<group>"; };
-		360283DF23AAACDE00D8E232 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		360283E023AAACDE00D8E232 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		360283E123AAACDE00D8E232 /* Favourite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		360283E223AAACDE00D8E232 /* Favourite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		360283E323AAACDE00D8E232 /* Music+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		360283E423AAACDE00D8E232 /* Music+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		360283EB23AAADB600D8E232 /* IF26_coredata v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "IF26_coredata v2.xcdatamodel"; sourceTree = "<group>"; };
 		360283EE23AAD0A100D8E232 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		360283F123AAD40C00D8E232 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
@@ -89,6 +84,13 @@
 		364DCE46239E524000BB7558 /* bensound-anewbeginning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-anewbeginning.mp3"; sourceTree = "<group>"; };
 		364DCE47239E524000BB7558 /* bensound-creativeminds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-creativeminds.mp3"; sourceTree = "<group>"; };
 		364DCE48239E524000BB7558 /* bensound-ukulele.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-ukulele.mp3"; sourceTree = "<group>"; };
+		36A3D70F23AB829900486D5F /* NewMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMusicViewController.swift; sourceTree = "<group>"; };
+		36A3D71123AB8A6400486D5F /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36A3D71223AB8A6400486D5F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36A3D71323AB8A6400486D5F /* Music+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36A3D71423AB8A6400486D5F /* Music+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36A3D71523AB8A6400486D5F /* Favourite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36A3D71623AB8A6400486D5F /* Favourite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AF0EE479235EF67800158B51 /* IF26-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IF26-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE48D235EF67D00158B51 /* IF26-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IF26-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				364DCE3D239E524000BB7558 /* FeedViewController.swift */,
 				364DCE3E239E524000BB7558 /* AccountViewController.swift */,
 				364DCE3F239E524000BB7558 /* SigninViewController.swift */,
+				36A3D70F23AB829900486D5F /* NewMusicViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,12 +223,12 @@
 		368A4B2B239EC49900A7B0AF /* managedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				360283DF23AAACDE00D8E232 /* User+CoreDataClass.swift */,
-				360283E023AAACDE00D8E232 /* User+CoreDataProperties.swift */,
-				360283E123AAACDE00D8E232 /* Favourite+CoreDataClass.swift */,
-				360283E223AAACDE00D8E232 /* Favourite+CoreDataProperties.swift */,
-				360283E323AAACDE00D8E232 /* Music+CoreDataClass.swift */,
-				360283E423AAACDE00D8E232 /* Music+CoreDataProperties.swift */,
+				36A3D71123AB8A6400486D5F /* User+CoreDataClass.swift */,
+				36A3D71223AB8A6400486D5F /* User+CoreDataProperties.swift */,
+				36A3D71323AB8A6400486D5F /* Music+CoreDataClass.swift */,
+				36A3D71423AB8A6400486D5F /* Music+CoreDataProperties.swift */,
+				36A3D71523AB8A6400486D5F /* Favourite+CoreDataClass.swift */,
+				36A3D71623AB8A6400486D5F /* Favourite+CoreDataProperties.swift */,
 			);
 			path = managedObjects;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				364DCE5D239E524000BB7558 /* AppDelegate.swift in Sources */,
 				360283EF23AAD0A100D8E232 /* MusicCell.swift in Sources */,
 				364DCE58239E524000BB7558 /* MainViewController.swift in Sources */,
+				36A3D71023AB829900486D5F /* NewMusicViewController.swift in Sources */,
 				36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */,
 				36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */,
 				360283F223AAD40C00D8E232 /* MusicService.swift in Sources */,

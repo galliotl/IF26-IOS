@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  IF26-IOS
 //
-//  Created by Laura Haegel on 18/12/2019.
+//  Created by Laura Haegel on 19/12/2019.
 //  Copyright © 2019 if26. All rights reserved.
 //
 //
@@ -17,10 +17,11 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var uid: String?
-    @NSManaged public var lastName: String?
     @NSManaged public var firstName: String?
+    @NSManaged public var lastName: String?
+    @NSManaged public var password: String?
     @NSManaged public var picPath: String?
+    @NSManaged public var uid: String?
     @NSManaged public var favs: NSSet?
     @NSManaged public var musics: NSSet?
 

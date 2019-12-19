@@ -56,18 +56,19 @@ class LoginHelper {
     }
     
     func signupUser(uid: String, psw: String, lastname: String, firstname: String) -> Bool {
-                
+        
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataStack.managedObjectContext) as! User
-        newUser.setValue(uid, forKey: "uid")
-        newUser.setValue(psw, forKey: "password")
-        newUser.setValue(lastname, forKey: "lastName")
-        newUser.setValue(firstname, forKey: "firstName")
+        newUser.uid = uid
+        newUser.password = psw
+        newUser.lastName = lastname
+        newUser.firstName = firstname
         
         do {
             try coreDataStack.managedObjectContext.save()
             setConnectedUser(uid: uid)
             return true
         } catch {
+            coreDataStack.managedObjectContext.delete(newUser)
             return false
         }
         

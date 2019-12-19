@@ -32,6 +32,18 @@ class RedirectHelper {
         }
     }
     
+    func presentToNewMusic() {
+        
+        DispatchQueue.main.async {
+            
+            let storyboard = UIStoryboard(name: "NewMusic", bundle: nil)
+            let newmusicVC = storyboard.instantiateViewController(withIdentifier: "new music") as! NewMusicViewController
+            self.appDelegate.window?.rootViewController = newmusicVC
+
+        }
+
+    }
+    
     func redirectToHomeScreen() {
         
         DispatchQueue.main.async {

@@ -51,12 +51,18 @@ class SigninViewController: UIViewController {
         guard let lastname = self.firstname.text, !lastname.isEmpty else {
             return false
         }
-        
         return LoginHelper.getInstance().signupUser(uid: uid, psw: psw, lastname: lastname, firstname: firstname)
+
     }
     
     func signupFailed() {
+        
         alert.text = "signup failed"
+        lastname.text = ""
+        firstname.text = ""
+        password.text = ""
+        identifiant.text = ""
+        
     }
     
     func signupSucceded() {
