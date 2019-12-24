@@ -31,6 +31,8 @@
 		3687D71323AFE7F500DF795B /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687D71223AFE7F500DF795B /* StorageUtil.swift */; };
 		36A3D71023AB829900486D5F /* NewMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D70F23AB829900486D5F /* NewMusicViewController.swift */; };
 		36A3D71E23AC211E00486D5F /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D71D23AC211E00486D5F /* MusicHelper.swift */; };
+		36A6AF4423B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 36A6AF4323B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel */; };
+		36A6AF4623B1456C006A65CA /* UUIDToStringPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6AF4523B1456C006A65CA /* UUIDToStringPolicy.swift */; };
 		36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */; };
 		AF0EE492235EF67D00158B51 /* IF26_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */; };
 		AF0EE49D235EF67E00158B51 /* IF26_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */; };
@@ -80,13 +82,17 @@
 		364DCE43239E524000BB7558 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3687D71223AFE7F500DF795B /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		36A3D70F23AB829900486D5F /* NewMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMusicViewController.swift; sourceTree = "<group>"; };
-		36A3D71123AB8A6400486D5F /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		36A3D71223AB8A6400486D5F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		36A3D71323AB8A6400486D5F /* Music+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataClass.swift"; sourceTree = "<group>"; };
-		36A3D71423AB8A6400486D5F /* Music+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		36A3D71523AB8A6400486D5F /* Favourite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		36A3D71623AB8A6400486D5F /* Favourite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		36A3D71D23AC211E00486D5F /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
+		36A6AF3223B13D05006A65CA /* IF26_coredata v 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "IF26_coredata v 3.xcdatamodel"; sourceTree = "<group>"; };
+		36A6AF3323B13D85006A65CA /* Favourite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36A6AF3423B13D85006A65CA /* Favourite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36A6AF3523B13D85006A65CA /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36A6AF3623B13D85006A65CA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36A6AF3723B13D85006A65CA /* Music+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataClass.swift"; sourceTree = "<group>"; };
+		36A6AF3823B13D85006A65CA /* Music+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		36A6AF3F23B140BC006A65CA /* v4 uid to string.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "v4 uid to string.xcdatamodel"; sourceTree = "<group>"; };
+		36A6AF4323B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UUIDToStringsForIds.xcmappingmodel; sourceTree = "<group>"; };
+		36A6AF4523B1456C006A65CA /* UUIDToStringPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDToStringPolicy.swift; sourceTree = "<group>"; };
 		36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AF0EE479235EF67800158B51 /* IF26-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IF26-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE48D235EF67D00158B51 /* IF26-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IF26-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +211,7 @@
 		3687D71423AFE9DB00DF795B /* database */ = {
 			isa = PBXGroup;
 			children = (
+				36A6AF4023B142F4006A65CA /* migration */,
 				360283DC23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld */,
 				36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */,
 				36A3D71D23AC211E00486D5F /* MusicHelper.swift */,
@@ -225,14 +232,23 @@
 		368A4B2B239EC49900A7B0AF /* managedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				36A3D71123AB8A6400486D5F /* User+CoreDataClass.swift */,
-				36A3D71223AB8A6400486D5F /* User+CoreDataProperties.swift */,
-				36A3D71323AB8A6400486D5F /* Music+CoreDataClass.swift */,
-				36A3D71423AB8A6400486D5F /* Music+CoreDataProperties.swift */,
-				36A3D71523AB8A6400486D5F /* Favourite+CoreDataClass.swift */,
-				36A3D71623AB8A6400486D5F /* Favourite+CoreDataProperties.swift */,
+				36A6AF3323B13D85006A65CA /* Favourite+CoreDataClass.swift */,
+				36A6AF3423B13D85006A65CA /* Favourite+CoreDataProperties.swift */,
+				36A6AF3523B13D85006A65CA /* User+CoreDataClass.swift */,
+				36A6AF3623B13D85006A65CA /* User+CoreDataProperties.swift */,
+				36A6AF3723B13D85006A65CA /* Music+CoreDataClass.swift */,
+				36A6AF3823B13D85006A65CA /* Music+CoreDataProperties.swift */,
 			);
 			path = managedObjects;
+			sourceTree = "<group>";
+		};
+		36A6AF4023B142F4006A65CA /* migration */ = {
+			isa = PBXGroup;
+			children = (
+				36A6AF4323B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel */,
+				36A6AF4523B1456C006A65CA /* UUIDToStringPolicy.swift */,
+			);
+			path = migration;
 			sourceTree = "<group>";
 		};
 		AF0EE470235EF67700158B51 = {
@@ -421,7 +437,9 @@
 				364DCE5D239E524000BB7558 /* AppDelegate.swift in Sources */,
 				360283EF23AAD0A100D8E232 /* MusicCell.swift in Sources */,
 				364DCE58239E524000BB7558 /* MainViewController.swift in Sources */,
+				36A6AF4423B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel in Sources */,
 				36A3D71023AB829900486D5F /* NewMusicViewController.swift in Sources */,
+				36A6AF4623B1456C006A65CA /* UUIDToStringPolicy.swift in Sources */,
 				3687D71323AFE7F500DF795B /* StorageUtil.swift in Sources */,
 				36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */,
 				36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */,
@@ -762,10 +780,12 @@
 		360283DC23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				36A6AF3F23B140BC006A65CA /* v4 uid to string.xcdatamodel */,
+				36A6AF3223B13D05006A65CA /* IF26_coredata v 3.xcdatamodel */,
 				360283EB23AAADB600D8E232 /* IF26_coredata v2.xcdatamodel */,
 				360283DD23AAAAA500D8E232 /* IF26_coredata.xcdatamodel */,
 			);
-			currentVersion = 360283EB23AAADB600D8E232 /* IF26_coredata v2.xcdatamodel */;
+			currentVersion = 36A6AF3F23B140BC006A65CA /* v4 uid to string.xcdatamodel */;
 			path = IF26_coredata.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

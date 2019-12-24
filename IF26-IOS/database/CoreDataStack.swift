@@ -53,6 +53,7 @@ class CoreDataStack: NSObject {
     }
     
     func saveMainContext() {
+        
         if managedObjectContext.hasChanges {
             do {
                 try managedObjectContext.save()
@@ -60,6 +61,19 @@ class CoreDataStack: NSObject {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+
+    }
+    
+    func deleteAllFromEntity(name: String) {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: name)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try managedObjectContext.execute(deleteRequest)
+        } catch {
+            // TODO: handle the error
         }
 
     }

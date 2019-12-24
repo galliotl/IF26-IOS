@@ -114,4 +114,10 @@ class LoginHelper {
     
     }
     
+    func removeUserData() {
+        
+        // fetch user
+        
+        
+    }
 }

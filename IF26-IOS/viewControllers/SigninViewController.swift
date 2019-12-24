@@ -47,7 +47,7 @@ class SigninViewController: UIViewController {
             return false
         }
         
-        guard let lastname = self.firstname.text, !lastname.isEmpty else {
+        guard let lastname = self.lastname.text, !lastname.isEmpty else {
             return false
         }
         return loginHelper.signupUser(uid: uid, psw: psw, lastname: lastname, firstname: firstname)

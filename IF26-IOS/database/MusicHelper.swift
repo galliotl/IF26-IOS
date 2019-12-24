@@ -22,10 +22,10 @@ class MusicHelper {
         
         // create music
         let music = NSEntityDescription.insertNewObject(forEntityName: "Music", into: moc) as! Music
-        music.mid = UUID()
+        music.mid = UUID().uuidString
         music.path = path
         music.title = title
-        music.artistId = artist
+        music.artist = artist
         
         do {
             try moc.save()
@@ -38,10 +38,10 @@ class MusicHelper {
         
     }
     
-    func removeMusicFromDb(mid: UUID) -> Bool {
+    func removeMusicFromDb(mid: String) -> Bool {
         
-        let request = NSFetchRequest<Music>(entityName: "Music")
-        // request.predicate = NSPredicate(format: "mid == %@", mid)
+        let request: NSFetchRequest<Music> = Music.fetchRequest()
+        request.predicate = NSPredicate(format: "mid == %@", mid)
         request.returnsObjectsAsFaults = false
         
         do {
@@ -51,10 +51,12 @@ class MusicHelper {
                 return false
             }
             let music = result[0]
-            try moc.delete(music)
+            moc.delete(music)
+            try moc.save()
             return true
             
         } catch {
+            // peut être besoin de rajoutter l'élément ici
             print("cannot delete music")
             return false
         }
@@ -63,7 +65,7 @@ class MusicHelper {
     
     func getMusics() -> [Music] {
        
-        let request = NSFetchRequest<Music>(entityName: "Music")
+        let request: NSFetchRequest<Music> = Music.fetchRequest()
         request.returnsObjectsAsFaults = false
         
         do {

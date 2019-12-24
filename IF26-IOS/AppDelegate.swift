@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var coreDataStack = CoreDataStack() {}
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        /*coreDataStack.deleteAllFromEntity(name: "User")
+        coreDataStack.deleteAllFromEntity(name: "Music")
+        coreDataStack.deleteAllFromEntity(name: "Favourite")*/
         return true
     }
     

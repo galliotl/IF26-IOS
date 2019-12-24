@@ -15,11 +15,10 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if isUserConnected() == false {
-            
+        if !isUserConnected() {
             redirectUserToLoginScreen()
-            
         }
+
     }
     
     func isUserConnected() -> Bool {

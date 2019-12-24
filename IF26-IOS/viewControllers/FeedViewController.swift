@@ -61,7 +61,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedcell", for: indexPath) as! MusicCell
         let song = feedsongs[indexPath.row]
         cell.title?.text = song.title
-        cell.artist?.text = "\(song.artistId?.firstName ?? "") \(song.artistId?.lastName ?? "")"
+        cell.artist?.text = "\(song.artist?.firstName ?? "") \(song.artist?.lastName ?? "")"
         
         let longPressGestureRecognizer = UILongPressGestureRecognizer(target: cell, action: #selector(longPressed(press:)))
         cell.addGestureRecognizer(longPressGestureRecognizer)
@@ -88,7 +88,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let music = feedsongs[row]
         
         // verify the user is the author
-        guard let user = music.artistId, user.uid == loginHelper.getConnectedUserId() else {
+        guard let user = music.artist, user.uid == loginHelper.getConnectedUserId() else {
             print("music wasn't created by the user")
             // todo, show the user
             return

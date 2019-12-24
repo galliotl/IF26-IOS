@@ -2,7 +2,7 @@
 //  Favourite+CoreDataProperties.swift
 //  IF26-IOS
 //
-//  Created by Laura Haegel on 19/12/2019.
+//  Created by Laura Haegel on 23/12/2019.
 //  Copyright © 2019 if26. All rights reserved.
 //
 //
@@ -18,7 +18,7 @@ extension Favourite {
     }
 
     @NSManaged public var fid: UUID?
-    @NSManaged public var mid: Music?
-    @NSManaged public var uid: User?
+    @NSManaged public var music: Music?
+    @NSManaged public var artist: User?
 
 }
