@@ -33,6 +33,7 @@
 		36A3D71E23AC211E00486D5F /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D71D23AC211E00486D5F /* MusicHelper.swift */; };
 		36A6AF4423B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 36A6AF4323B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel */; };
 		36A6AF4623B1456C006A65CA /* UUIDToStringPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6AF4523B1456C006A65CA /* UUIDToStringPolicy.swift */; };
+		36A6AF4923B25E30006A65CA /* MusicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6AF4823B25E30006A65CA /* MusicTableView.swift */; };
 		36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */; };
 		AF0EE492235EF67D00158B51 /* IF26_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE491235EF67D00158B51 /* IF26_IOSTests.swift */; };
 		AF0EE49D235EF67E00158B51 /* IF26_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0EE49C235EF67E00158B51 /* IF26_IOSUITests.swift */; };
@@ -94,6 +95,7 @@
 		36A6AF4323B14384006A65CA /* UUIDToStringsForIds.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UUIDToStringsForIds.xcmappingmodel; sourceTree = "<group>"; };
 		36A6AF4523B1456C006A65CA /* UUIDToStringPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDToStringPolicy.swift; sourceTree = "<group>"; };
 		36A6AF4723B2309D006A65CA /* v5 deletion rules.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "v5 deletion rules.xcdatamodel"; sourceTree = "<group>"; };
+		36A6AF4823B25E30006A65CA /* MusicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableView.swift; sourceTree = "<group>"; };
 		36AE8BCC23A39B4200332DEC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AF0EE479235EF67800158B51 /* IF26-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IF26-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0EE48D235EF67D00158B51 /* IF26-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IF26-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				360283EE23AAD0A100D8E232 /* MusicCell.swift */,
+				36A6AF4823B25E30006A65CA /* MusicTableView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				36A3D71023AB829900486D5F /* NewMusicViewController.swift in Sources */,
 				36A6AF4623B1456C006A65CA /* UUIDToStringPolicy.swift in Sources */,
 				3687D71323AFE7F500DF795B /* StorageUtil.swift in Sources */,
+				36A6AF4923B25E30006A65CA /* MusicTableView.swift in Sources */,
 				36AE8BCD23A39B4200332DEC /* CoreDataStack.swift in Sources */,
 				36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */,
 				360283F223AAD40C00D8E232 /* MusicService.swift in Sources */,
