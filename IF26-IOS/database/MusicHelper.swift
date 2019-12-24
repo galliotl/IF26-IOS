@@ -38,7 +38,7 @@ class MusicHelper {
         
     }
     
-    func removeMusicFromDb(mid: String) -> Bool {
+    func removeMusicFromDb(mid: String) {
         
         let request: NSFetchRequest<Music> = Music.fetchRequest()
         request.predicate = NSPredicate(format: "mid == %@", mid)
@@ -48,17 +48,17 @@ class MusicHelper {
             
             let result: [Music] = try moc.fetch(request)
             if result.isEmpty {
-                return false
+                return
             }
             let music = result[0]
             moc.delete(music)
             try moc.save()
-            return true
             
         } catch {
+            
             // peut être besoin de rajoutter l'élément ici
             print("cannot delete music")
-            return false
+            
         }
 
     }
@@ -66,7 +66,6 @@ class MusicHelper {
     func getMusics() -> [Music] {
        
         let request: NSFetchRequest<Music> = Music.fetchRequest()
-        request.returnsObjectsAsFaults = false
         
         do {
             let result: [Music] = try moc.fetch(request)

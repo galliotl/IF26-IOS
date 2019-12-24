@@ -14,9 +14,10 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var myTableView: UITableView!
     var feedsongs:[Music] = []
-    var musicHelper = MusicHelper()
-    var loginHelper = LoginHelper()
-    
+    var deletionIndexPath: IndexPath? = nil
+    lazy var musicHelper = MusicHelper()
+    lazy var loginHelper = LoginHelper()
+    lazy var storageUtil = StorageUtil()
     private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -51,7 +52,7 @@ class FeedViewController: UIViewController {
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
-    
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return feedsongs.count
     }
@@ -63,8 +64,8 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         cell.title?.text = song.title
         cell.artist?.text = "\(song.artist?.firstName ?? "") \(song.artist?.lastName ?? "")"
         
-        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: cell, action: #selector(longPressed(press:)))
-        cell.addGestureRecognizer(longPressGestureRecognizer)
+        /*let longPressGestureRecognizer = UILongPressGestureRecognizer(target: cell, action: #selector(longPressed(press:)))
+        cell.addGestureRecognizer(longPressGestureRecognizer)*/
         return cell
         
     }
@@ -76,8 +77,51 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         MusicService.getInstance().playPlaylist(playlist: playlist)
         
     }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deletionIndexPath = indexPath
+            confirmDeletion()
+        }
+    }
     
-    @objc func longPressed(press: UILongPressGestureRecognizer) {
+    func confirmDeletion() {
+        
+        let alert = UIAlertController(title: "Delete Planet", message: "Are you sure you want to permanently delete the music?", preferredStyle: .actionSheet)
+        
+        let DeleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDelete)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDelete)
+    
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+    
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func handleDelete(alertAction: UIAlertAction!){
+        
+        if deletionIndexPath == nil {
+            print("no item selected")
+            return
+        }
+        let musicToDelete = feedsongs[deletionIndexPath!.row]
+                
+        // remove from device/db
+        storageUtil.deleteFile(url: URL(fileURLWithPath: musicToDelete.path!))
+        musicHelper.removeMusicFromDb(mid: musicToDelete.mid!)
+        
+        // remove from UI
+        feedsongs.remove(at: deletionIndexPath!.row)
+        myTableView.deleteRows(at: [deletionIndexPath!], with: .fade)
+        
+    }
+    
+    func cancelDelete(alertAction: UIAlertAction!){
+        deletionIndexPath = nil
+    }
+    
+    /*@objc func longPressed(press: UILongPressGestureRecognizer) {
         
         // get the music
         let index = myTableView.indexPathForRow(at: press.location(in: myTableView))
@@ -111,7 +155,7 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         // refresh feed
         myTableView.reloadData()
         
-    }
+    }*/
     
     @objc private func refreshFeed(_ sender: Any) {
         

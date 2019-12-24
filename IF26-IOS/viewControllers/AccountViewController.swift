@@ -32,6 +32,14 @@ class AccountViewController: UIViewController {
         
     }
 
+    @IBAction func deleteAccount(_ sender: Any) {
+        
+        if loginHelper.deleteAccount() {
+            redirectUserToLoginScreen()
+        }
+        
+    }
+    
     func loadUserData() {
 
         guard let userId = loginHelper.getConnectedUserId() else {

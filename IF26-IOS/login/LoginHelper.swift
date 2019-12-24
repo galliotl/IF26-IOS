@@ -13,7 +13,6 @@ class LoginHelper {
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var moc: NSManagedObjectContext
-    var connectedUserData: User?
     
     init() {
         moc = appDelegate.coreDataStack.managedObjectContext
@@ -38,7 +37,7 @@ class LoginHelper {
             if user.password == nil || user.password != password {
                 return false
             } else {
-                setConnectedUserData(user: user)
+                setConnectedUser(uid: username)
                 return true
             }
             
@@ -59,7 +58,7 @@ class LoginHelper {
         
         do {
             try moc.save()
-            setConnectedUserData(user: newUser)
+            setConnectedUser(uid: uid)
             return true
         } catch {
             moc.delete(newUser)
@@ -71,7 +70,6 @@ class LoginHelper {
     func logoutUser() {
         
         UserDefaults.standard.removeObject(forKey: "connectedUser")
-        connectedUserData = nil
         
     }
     
@@ -107,17 +105,23 @@ class LoginHelper {
         UserDefaults.standard.set(uid, forKey: "connectedUser")
     }
     
-    private func setConnectedUserData(user: User) {
+    func deleteAccount() -> Bool {
         
-        connectedUserData = user
-        setConnectedUser(uid: user.uid!)
-    
-    }
-    
-    func removeUserData() {
+        guard let currentUser = getConnectedUserData() else {
+            print("no connected user")
+            return false
+        }
         
-        // fetch user
+        moc.delete(currentUser)
         
-        
+        do {
+            try moc.save()
+            logoutUser()
+            return true
+        } catch {
+            print("cannot do that")
+            return false
+        }
+
     }
 }
