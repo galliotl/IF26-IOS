@@ -13,12 +13,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var coreDataStack: CoreDataStack!
+    lazy var coreDataStack = CoreDataStack() {}
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        coreDataStack = CoreDataStack() {
-            
-        }
+        
+        /*coreDataStack.deleteAllFromEntity(name: "User")
+        coreDataStack.deleteAllFromEntity(name: "Music")
+        coreDataStack.deleteAllFromEntity(name: "Favourite")*/
         return true
     }
     

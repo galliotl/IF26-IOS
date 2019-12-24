@@ -12,7 +12,7 @@ import AVFoundation
 class MusicService {
     static var instance: MusicService?
     
-    var playlist: [String] = []
+    var playlist: [Music] = []
     var audioPlayer = AVAudioPlayer()
     var thisSong = 0
     var audioStuffed = false
@@ -26,7 +26,7 @@ class MusicService {
         return instance!
     }
     
-    func playPlaylist(playlist: [String]) {
+    func playPlaylist(playlist: [Music]) {
         
         self.playlist = playlist
         thisSong = 0
@@ -36,26 +36,30 @@ class MusicService {
     
     func playCurrentSong() {
         
-        let currentPath = Bundle.main.path(forResource: playlist[thisSong], ofType: ".mp3")
-        do
-        {
-            try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: currentPath!) as URL)
+        guard let musicPath = playlist[thisSong].path else {
+            print("cannot play the music")
+            return
+        }
+        print(musicPath)
+        do {
+            
+            try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: musicPath) as URL)
             let audioSession = AVAudioSession.sharedInstance()
             try audioSession.setCategory(.playback, mode: .default)
 
             audioPlayer.play()
             audioStuffed = true
+            
         }
-        catch
-        {
-            print ("ERROR playing data")
+        catch {
+            print ("ERROR playing data \n \(error)")
         }
+        
     }
     
     func next() {
         
-        if thisSong < playlist.count-1 && audioStuffed == true
-        {
+        if thisSong < playlist.count-1 && audioStuffed == true {
             thisSong += 1
             playCurrentSong()
         }
@@ -64,8 +68,7 @@ class MusicService {
     
     func previous() {
         
-        if thisSong != 0 && audioStuffed == true
-        {
+        if thisSong != 0 && audioStuffed == true {
             thisSong -= 1
             playCurrentSong()
         }
@@ -84,12 +87,12 @@ class MusicService {
         return audioPlayer.isPlaying
     }
     
-    func getCurrentSongInfo() -> String {
+    func getCurrentSongInfo() -> Music? {
         
         if !playlist.isEmpty {
             return playlist[thisSong]
         }
-        return ""
+        return nil
         
     }
     
