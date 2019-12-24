@@ -35,6 +35,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-u1-9n1">
                                 <rect key="frame" x="16" y="20" width="79" height="30"/>
                                 <state key="normal" title="Delete user"/>
+                                <connections>
+                                    <action selector="deleteAccount:" destination="BkF-U4-32b" eventType="touchUpInside" id="uDa-tL-LLf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -56,9 +56,11 @@ class MusicHelper {
             return true
             
         } catch {
+            
             // peut être besoin de rajoutter l'élément ici
             print("cannot delete music")
             return false
+            
         }
 
     }
@@ -66,7 +68,6 @@ class MusicHelper {
     func getMusics() -> [Music] {
        
         let request: NSFetchRequest<Music> = Music.fetchRequest()
-        request.returnsObjectsAsFaults = false
         
         do {
             let result: [Music] = try moc.fetch(request)
