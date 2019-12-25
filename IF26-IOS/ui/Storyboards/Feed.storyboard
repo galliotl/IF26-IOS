@@ -70,7 +70,7 @@
                                                     </constraints>
                                                     <state key="normal" title="Fav"/>
                                                     <connections>
-                                                        <action selector="favClicked:" destination="nUA-vm-nnE" eventType="touchUpInside" id="Bxh-Zm-6qc"/>
+                                                        <action selector="favClicked:" destination="nUA-vm-nnE" eventType="touchUpInside" id="hRf-hC-3a3"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -89,6 +89,7 @@
                                         <connections>
                                             <outlet property="Artist" destination="fhS-AG-RLJ" id="gVx-Ft-B3j"/>
                                             <outlet property="Title" destination="tUq-qa-ZCS" id="Vdq-lO-CRL"/>
+                                            <outlet property="favBtn" destination="soW-Aj-UD7" id="RAV-7J-jy9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

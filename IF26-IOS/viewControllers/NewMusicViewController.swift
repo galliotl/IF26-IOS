@@ -15,7 +15,6 @@ class NewMusicViewController: UIViewController {
     @IBOutlet weak var musicTitle: UITextField!
     @IBOutlet weak var error: UILabel!
     var musicUrl: URL?
-    let loginHelper = LoginHelper()
     let musicHelper = MusicHelper()
     let storageHelper = StorageUtil()
     
@@ -90,7 +89,7 @@ extension NewMusicViewController {
         }
         
         // add music to database
-        let currentUser = loginHelper.getConnectedUserData()
+        let currentUser = LoginHelper.getInstance().getConnectedUserData()
         return musicHelper.addMusicToDb(title: title, path: musicPath, artist: currentUser!)
         
     }

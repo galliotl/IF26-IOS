@@ -55,12 +55,54 @@ class MusicHelper {
             try moc.save()
             
         } catch {
-            
-            // peut être besoin de rajoutter l'élément ici
             print("cannot delete music")
-            
         }
 
+    }
+    
+    func switchFav(user: User, music: Music) -> Bool {
+        
+        if user.hasFaved(music: music) {
+            removeFav(user: user, music: music)
+            return false
+        } else {
+            addToFavs(user: user, music: music)
+            return true
+        }
+        
+    }
+    
+    func addToFavs(user: User, music: Music) {
+        
+        let favourite = NSEntityDescription.insertNewObject(forEntityName: "Favourite", into: moc) as! Favourite
+        favourite.fid = UUID().uuidString
+        favourite.artist = user
+        favourite.music = music
+        
+        do {
+            try moc.save()
+            print("faved added")
+        } catch {
+            moc.delete(music)
+            print("cannot add fav to db")
+        }
+
+    }
+    
+    func removeFav(user: User, music: Music) {
+        
+        let request = Favourite.fetchFavFromMusicAndUser(music: music, user: user)
+        do {
+            
+            let result = try moc.fetch(request)
+            let favourite = result[0]
+            moc.delete(favourite)
+            try moc.save()
+            print("faved removed")
+        } catch {
+            print("couldn't remove the favourite item")
+        }
+        
     }
     
     func getMusics() -> [Music] {

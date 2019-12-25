@@ -11,41 +11,60 @@ import CoreData
 
 class LoginHelper {
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var moc: NSManagedObjectContext
+    static var instance: LoginHelper? = nil
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private var moc: NSManagedObjectContext
+    private var userData: User?
     
-    init() {
+    static func getInstance() -> LoginHelper {
+        
+        if instance == nil {
+            instance = LoginHelper()
+        }
+        return instance!
+    }
+    
+    private init() {
         moc = appDelegate.coreDataStack.managedObjectContext
     }
     
-    func loginUser(username: String, password: String) -> Bool {
-        
+    func fetchUserData(uid: String) -> User? {
+
         let request = NSFetchRequest<User>(entityName: "User")
-        request.predicate = NSPredicate(format: "uid == %@", username)
+        request.predicate = NSPredicate(format: "uid == %@", uid)
         request.returnsObjectsAsFaults = false
-        
+
         do {
             
             let result: [User] = try moc.fetch(request)
             
             if result.isEmpty {
-                return false
+                print("no results for user")
+                return nil
             }
             
             let user = result[0]
-            
-            if user.password == nil || user.password != password {
-                return false
-            } else {
-                setConnectedUser(uid: username)
-                return true
-            }
-            
+            return user
+        
         } catch {
             print("cannot fetch the user")
+            return nil
+        }
+        
+    }
+    
+    func loginUser(username: String, password: String) -> Bool {
+        
+        guard let user = fetchUserData(uid: username) else {
             return false
         }
         
+        if user.password == nil || user.password != password {
+            return false
+        } else {
+            setConnectedUserData(user: user)
+            return true
+        }
     }
     
     func signupUser(uid: String, psw: String, lastname: String, firstname: String) -> Bool {
@@ -58,7 +77,7 @@ class LoginHelper {
         
         do {
             try moc.save()
-            setConnectedUser(uid: uid)
+            setConnectedUserData(user: newUser)
             return true
         } catch {
             moc.delete(newUser)
@@ -70,6 +89,7 @@ class LoginHelper {
     func logoutUser() {
         
         UserDefaults.standard.removeObject(forKey: "connectedUser")
+        userData = nil
         
     }
     
@@ -77,32 +97,25 @@ class LoginHelper {
         return UserDefaults.standard.string(forKey: "connectedUser")
     }
     
+    func isUserConnected() -> Bool {
+        return getConnectedUserId() != nil
+    }
+    
     func getConnectedUserData() -> User? {
-
-        guard let userId = getConnectedUserId() else {
-            return nil
+        if isUserConnected() && userData == nil {
+            userData = fetchUserData(uid: getConnectedUserId()!)
         }
-        
-        // fetch request
-        let request = NSFetchRequest<User>(entityName: "User")
-        request.predicate = NSPredicate(format: "uid == %@", userId)
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            let result: [User] = try moc.fetch(request)
-            if result.isEmpty {
-                return nil
-            }
-            return result[0]
-        } catch {
-            print("cannot fetch the user")
-            return nil
-        }
-
+        return userData
     }
     
     private func setConnectedUser(uid: String) {
         UserDefaults.standard.set(uid, forKey: "connectedUser")
+    }
+    
+    private func setConnectedUserData(user: User) {
+        setConnectedUser(uid: user.uid!)
+        print("setting this user: \(user)")
+        userData = user
     }
     
     func deleteAccount() -> Bool {

@@ -13,12 +13,13 @@ class FeedViewController: UIViewController {
     
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var myTableView: UITableView!
+    
     var feedsongs:[Music] = []
     var deletionIndexPath: IndexPath? = nil
-    lazy var musicHelper = MusicHelper()
-    lazy var loginHelper = LoginHelper()
-    lazy var storageUtil = StorageUtil()
     private let refreshControl = UIRefreshControl()
+    
+    lazy var musicHelper = MusicHelper()
+    lazy var storageUtil = StorageUtil()
     
     override func viewDidLoad() {
         
@@ -63,13 +64,36 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         let song = feedsongs[indexPath.row]
         cell.title?.text = song.title
         cell.artist?.text = "\(song.artist?.firstName ?? "") \(song.artist?.lastName ?? "")"
+        let btn = cell.favBtn
         
-        /*let longPressGestureRecognizer = UILongPressGestureRecognizer(target: cell, action: #selector(longPressed(press:)))
-        cell.addGestureRecognizer(longPressGestureRecognizer)*/
+        cell.favClosure = { () in
+            self.favClicked(song: song, btn: btn!)
+        }
+        
+        if LoginHelper.getInstance().getConnectedUserData()!.hasFaved(music: song) {
+            btn?.setTitle("unFav", for: .normal)
+        }
         return cell
         
     }
 
+    func favClicked(song: Music, btn: UIButton) {
+        
+        guard (LoginHelper.getInstance().getConnectedUserData() != nil) else {
+            print("no user")
+            return
+        }
+        
+        if musicHelper.switchFav(user: LoginHelper.getInstance().getConnectedUserData()!, music: song) {
+            // faved has been added
+            btn.setTitle("unFav", for: .normal)
+        } else {
+            // faved has been removed
+            btn.setTitle("Fav", for: .normal)
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // create new playlist from current position 'til the end of the playlist
@@ -120,42 +144,6 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func cancelDelete(alertAction: UIAlertAction!){
         deletionIndexPath = nil
     }
-    
-    /*@objc func longPressed(press: UILongPressGestureRecognizer) {
-        
-        // get the music
-        let index = myTableView.indexPathForRow(at: press.location(in: myTableView))
-        guard let row = index?.row else {
-            // todo, show the user
-            return
-        }
-        let music = feedsongs[row]
-        
-        // verify the user is the author
-        guard let user = music.artist, user.uid == loginHelper.getConnectedUserId() else {
-            print("music wasn't created by the user")
-            // todo, show the user
-            return
-        }
-    
-        
-        // are you sure?
-        let alert = UIAlertController(title: nil, message: "Are you sure you want to delete?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { action in
-            
-            
-            
-        }))
-        self.present(alert, animated: true, completion: nil)
-
-        // remove it from db
-        
-        // remove it from storage
-        
-        // refresh feed
-        myTableView.reloadData()
-        
-    }*/
     
     @objc private func refreshFeed(_ sender: Any) {
         

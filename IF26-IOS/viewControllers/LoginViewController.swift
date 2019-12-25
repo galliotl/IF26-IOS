@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var id: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var alert: UILabel!
-    let loginHelper = LoginHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +38,7 @@ class LoginViewController: UIViewController {
             return false
         }
         
-        return loginHelper.loginUser(username: typedId, password: typedPsw)
+        return LoginHelper.getInstance().loginUser(username: typedId, password: typedPsw)
     
     }
     

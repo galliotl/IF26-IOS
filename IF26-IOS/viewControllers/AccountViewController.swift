@@ -12,9 +12,7 @@ import CoreData
 class AccountViewController: UIViewController {
 
     @IBOutlet weak var userLabel: UILabel!
-    let loginHelper = LoginHelper()
     var userData: User? = nil
-    var coreDataStack = CoreDataStack() { }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,46 +25,21 @@ class AccountViewController: UIViewController {
     
     @IBAction func logoff(_ sender: Any) {
         
-        loginHelper.logoutUser()
+        LoginHelper.getInstance().logoutUser()
         redirectUserToLoginScreen()
         
     }
 
     @IBAction func deleteAccount(_ sender: Any) {
         
-        if loginHelper.deleteAccount() {
+        if LoginHelper.getInstance().deleteAccount() {
             redirectUserToLoginScreen()
         }
         
     }
     
     func loadUserData() {
-
-        guard let userId = loginHelper.getConnectedUserId() else {
-            redirectUserToLoginScreen()
-            return
-        }
-        let request = NSFetchRequest<User>(entityName: "User")
-        
-        request.predicate = NSPredicate(format: "uid == %@", userId)
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            
-            let result: [User] = try coreDataStack.managedObjectContext.fetch(request)
-                        
-            if result.isEmpty {
-                redirectUserToLoginScreen()
-                return
-            }
-            userData = result[0]
-            
-        } catch {
-            print("cannot fetch the user")
-            redirectUserToLoginScreen()
-            return
-        }
-
+        userData = LoginHelper.getInstance().getConnectedUserData()
     }
     
     func redirectUserToLoginScreen() {

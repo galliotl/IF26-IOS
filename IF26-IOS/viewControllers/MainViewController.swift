@@ -9,23 +9,14 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
-    let loginHelper = LoginHelper()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        if !isUserConnected() {
+        if !LoginHelper.getInstance().isUserConnected() {
             redirectUserToLoginScreen()
         }
+        super.viewDidLoad()
 
-    }
-    
-    func isUserConnected() -> Bool {
-        
-        let connectedUser = loginHelper.getConnectedUserId()
-        return connectedUser != nil && connectedUser != ""
-    
     }
     
     func redirectUserToLoginScreen() {

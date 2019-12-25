@@ -15,8 +15,7 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var firstname: UITextField!
     @IBOutlet weak var lastname: UITextField!
     @IBOutlet weak var alert: UILabel!
-    let loginHelper = LoginHelper()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         alert.text = ""
@@ -50,7 +49,7 @@ class SigninViewController: UIViewController {
         guard let lastname = self.lastname.text, !lastname.isEmpty else {
             return false
         }
-        return loginHelper.signupUser(uid: uid, psw: psw, lastname: lastname, firstname: firstname)
+        return LoginHelper.getInstance().signupUser(uid: uid, psw: psw, lastname: lastname, firstname: firstname)
 
     }
     

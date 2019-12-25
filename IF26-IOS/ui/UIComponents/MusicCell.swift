@@ -12,15 +12,15 @@ class MusicCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak var favBtn: UIButton!
     
+    var favClosure: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
     @IBAction func favClicked(_ sender: Any) {
-        
+        favClosure?()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
