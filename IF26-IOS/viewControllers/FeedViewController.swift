@@ -12,15 +12,13 @@ import MobileCoreServices
 class FeedViewController: UIViewController {
     
     @IBOutlet weak var feedTableView: UITableView!
-    @IBOutlet weak var myTableView: UITableView!
     
-    var feedsongs:[Music] = []
-    var deletionIndexPath: IndexPath? = nil
     private let refreshControl = UIRefreshControl()
     
     lazy var musicHelper = MusicHelper()
     lazy var storageUtil = StorageUtil()
-    
+    private let dataSource = MusicTableDataSource()
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -29,13 +27,18 @@ class FeedViewController: UIViewController {
     }
     
     func setupFeed() {
-        
+
+        dataSource.deletionClosure = { (indexPath) in
+            self.confirmDeletion(deletionIndexPath: indexPath)
+        }
+        feedTableView.dataSource = dataSource
+        feedTableView.delegate = self
         if #available(iOS 10.0, *) {
             feedTableView.refreshControl = refreshControl
         } else {
             feedTableView.addSubview(refreshControl)
         }
-        if feedsongs.isEmpty {
+        if dataSource.list.isEmpty {
             fetchSongs()
         }
         refreshControl.addTarget(self, action: #selector(refreshFeed(_:)), for: .valueChanged)
@@ -45,76 +48,41 @@ class FeedViewController: UIViewController {
     func fetchSongs() {
         
         DispatchQueue.main.async {
-            self.feedsongs = self.musicHelper.getMusics()
-            self.myTableView.reloadData()
+            self.dataSource.list = self.musicHelper.getMusics()
+            self.feedTableView.reloadData()
         }
         
-    }    
+    }
+    
+    @objc private func refreshFeed(_ sender: Any) {
+        
+        fetchSongs()
+        refreshControl.endRefreshing()
+        
+    }
 }
 
-extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
-        
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedsongs.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "feedcell", for: indexPath) as! MusicCell
-        let song = feedsongs[indexPath.row]
-        cell.title?.text = song.title
-        cell.artist?.text = "\(song.artist?.firstName ?? "") \(song.artist?.lastName ?? "")"
-        let btn = cell.favBtn
-        
-        cell.favClosure = { () in
-            self.favClicked(song: song, btn: btn!)
-        }
-        
-        if LoginHelper.getInstance().getConnectedUserData()!.hasFaved(music: song) {
-            btn?.setTitle("unFav", for: .normal)
-        }
-        return cell
-        
-    }
+extension FeedViewController: UITableViewDelegate {
 
-    func favClicked(song: Music, btn: UIButton) {
-        
-        guard (LoginHelper.getInstance().getConnectedUserData() != nil) else {
-            print("no user")
-            return
-        }
-        
-        if musicHelper.switchFav(user: LoginHelper.getInstance().getConnectedUserData()!, music: song) {
-            // faved has been added
-            btn.setTitle("unFav", for: .normal)
-        } else {
-            // faved has been removed
-            btn.setTitle("Fav", for: .normal)
-        }
-        
-    }
-    
+    // click controler for a cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // create new playlist from current position 'til the end of the playlist
-        let playlist: [Music] = Array(feedsongs[indexPath.row...])
+        let playlist: [Music] = Array(dataSource.list[indexPath.row...])
         MusicService.getInstance().playPlaylist(playlist: playlist)
         
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            deletionIndexPath = indexPath
-            confirmDeletion()
-        }
-    }
-    
-    func confirmDeletion() {
+    func confirmDeletion(deletionIndexPath: IndexPath) {
         
         let alert = UIAlertController(title: "Delete Planet", message: "Are you sure you want to permanently delete the music?", preferredStyle: .actionSheet)
         
-        let DeleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDelete)
-        let CancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDelete)
+        let DeleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(alertAction) in
+            self.handleDelete(alertAction: alertAction, deletionIndexPath: deletionIndexPath)
+        })
+        let CancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {(alertAction) in
+            
+        })
     
         alert.addAction(DeleteAction)
         alert.addAction(CancelAction)
@@ -123,32 +91,17 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    func handleDelete(alertAction: UIAlertAction!){
+    func handleDelete(alertAction: UIAlertAction!, deletionIndexPath: IndexPath){
         
-        if deletionIndexPath == nil {
-            print("no item selected")
-            return
-        }
-        let musicToDelete = feedsongs[deletionIndexPath!.row]
+        let musicToDelete = dataSource.list[deletionIndexPath.row]
                 
         // remove from device/db
         storageUtil.deleteFile(url: URL(fileURLWithPath: musicToDelete.path!))
         musicHelper.removeMusicFromDb(mid: musicToDelete.mid!)
         
         // remove from UI
-        feedsongs.remove(at: deletionIndexPath!.row)
-        myTableView.deleteRows(at: [deletionIndexPath!], with: .fade)
-        
-    }
-    
-    func cancelDelete(alertAction: UIAlertAction!){
-        deletionIndexPath = nil
-    }
-    
-    @objc private func refreshFeed(_ sender: Any) {
-        
-        fetchSongs()
-        refreshControl.endRefreshing()
+        dataSource.list.remove(at: deletionIndexPath.row)
+        feedTableView.deleteRows(at: [deletionIndexPath], with: .fade)
         
     }
 

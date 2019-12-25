@@ -93,11 +93,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Xp6-jY-TCc" id="Aui-Im-g9Z"/>
-                                    <outlet property="delegate" destination="Xp6-jY-TCc" id="B0z-dh-LCT"/>
-                                    <outlet property="prefetchDataSource" destination="Xp6-jY-TCc" id="6xX-nF-px4"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghs-cO-fiA">
                                 <rect key="frame" x="95" y="576" width="185" height="30"/>
@@ -123,8 +118,7 @@
                     <navigationItem key="navigationItem" title="Feed" id="y9r-Wt-wXd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="feedTableView" destination="Mvo-er-eKN" id="1ax-nL-x0o"/>
-                        <outlet property="myTableView" destination="Mvo-er-eKN" id="1L9-Ic-HTE"/>
+                        <outlet property="feedTableView" destination="Mvo-er-eKN" id="i2R-fU-Wxz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQr-S8-kZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
