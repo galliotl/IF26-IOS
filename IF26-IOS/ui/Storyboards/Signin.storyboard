@@ -89,7 +89,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="erD-Zf-hdQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sign up" id="cBx-a4-ihf"/>
+                    <tabBarItem key="tabBarItem" title="Sign up" selectedImage="person.badge.plus" catalog="system" id="cBx-a4-ihf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="alert" destination="EVe-82-bgP" id="ZG8-3y-0Pq"/>
@@ -104,4 +104,7 @@
             <point key="canvasLocation" x="205.59999999999999" y="187.55622188905548"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.badge.plus" catalog="system" width="64" height="58"/>
+    </resources>
 </document>

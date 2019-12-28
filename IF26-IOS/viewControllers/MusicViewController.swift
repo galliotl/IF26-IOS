@@ -34,11 +34,11 @@ class MusicViewController: UIViewController {
          if musicService.isPlaying() {
              // pause
              musicService.pause()
-             playPauseBtn.setTitle("play",for: .normal)
+             displayPlay()
          } else {
              // play
              musicService.play()
-             playPauseBtn.setTitle("pause",for: .normal)
+             displayPause()
          }
         
     }
@@ -57,12 +57,34 @@ class MusicViewController: UIViewController {
         
         if musicService.audioStuffed {
             if musicService.isPlaying() {
-                playPauseBtn.setTitle("pause",for: .normal)
+                displayPause()
             }
             else {
-                playPauseBtn.setTitle("play",for: .normal)
+                displayPlay()
             }
+        } else {
+            displayPlay()
         }
         
+    }
+    
+    func displayPause() {
+        if #available(iOS 13.0, *) {
+            playPauseBtn.setTitle(nil, for: .normal)
+            playPauseBtn.setImage(UIImage.init(systemName: "pause"), for: .normal)
+        } else {
+            playPauseBtn.setImage(nil, for: .normal)
+            playPauseBtn.setTitle("pause", for: .normal)
+        }
+    }
+    
+    func displayPlay() {
+        if #available(iOS 13.0, *) {
+            playPauseBtn.setTitle(nil, for: .normal)
+            playPauseBtn.setImage(UIImage.init(systemName: "play"), for: .normal)
+        } else {
+            playPauseBtn.setImage(nil, for: .normal)
+            playPauseBtn.setTitle("play", for: .normal)
+        }
     }
 }

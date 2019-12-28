@@ -12,5 +12,10 @@ import CoreData
 
 @objc(Music)
 public class Music: NSManagedObject {
+    
+    /*public class func fetchFavedRequest(user: User) -> NSFetchRequest<Music> {
+        let request = NSFetchRequest<Music>(entityName: "Music")
+        request.predicate = NSPredicate
+    }*/
 
 }

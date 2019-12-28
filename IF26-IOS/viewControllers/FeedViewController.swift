@@ -17,7 +17,7 @@ class FeedViewController: UIViewController {
     
     lazy var musicHelper = MusicHelper()
     lazy var storageUtil = StorageUtil()
-    private let dataSource = MusicTableDataSource()
+    private let dataController = MusicTableController()
 
     override func viewDidLoad() {
         
@@ -26,29 +26,15 @@ class FeedViewController: UIViewController {
         
     }
     
-    func setupFeed() {
+}
 
-        dataSource.deletionClosure = { (indexPath) in
-            self.confirmDeletion(deletionIndexPath: indexPath)
-        }
-        feedTableView.dataSource = dataSource
-        feedTableView.delegate = self
-        if #available(iOS 10.0, *) {
-            feedTableView.refreshControl = refreshControl
-        } else {
-            feedTableView.addSubview(refreshControl)
-        }
-        if dataSource.list.isEmpty {
-            fetchSongs()
-        }
-        refreshControl.addTarget(self, action: #selector(refreshFeed(_:)), for: .valueChanged)
-
-    }
+// MARK: - Song part
+extension FeedViewController {
     
     func fetchSongs() {
         
         DispatchQueue.main.async {
-            self.dataSource.list = self.musicHelper.getMusics()
+            self.dataController.list = self.musicHelper.getMusics()
             self.feedTableView.reloadData()
         }
         
@@ -60,22 +46,34 @@ class FeedViewController: UIViewController {
         refreshControl.endRefreshing()
         
     }
+    
+    func setupFeed() {
+
+        dataController.deletionClosure = { (indexPath) in
+            self.confirmDeletion(deletionIndexPath: indexPath)
+        }
+        feedTableView.dataSource = dataController
+        feedTableView.delegate = dataController
+        if #available(iOS 10.0, *) {
+            feedTableView.refreshControl = refreshControl
+        } else {
+            feedTableView.addSubview(refreshControl)
+        }
+        if dataController.list.isEmpty {
+            fetchSongs()
+        }
+        refreshControl.addTarget(self, action: #selector(refreshFeed(_:)), for: .valueChanged)
+
+    }
+    
 }
 
-extension FeedViewController: UITableViewDelegate {
-
-    // click controler for a cell
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        // create new playlist from current position 'til the end of the playlist
-        let playlist: [Music] = Array(dataSource.list[indexPath.row...])
-        MusicService.getInstance().playPlaylist(playlist: playlist)
-        
-    }
-
+// MARK: - Deletion closure
+extension FeedViewController {
+    
     func confirmDeletion(deletionIndexPath: IndexPath) {
         
-        let alert = UIAlertController(title: "Delete Planet", message: "Are you sure you want to permanently delete the music?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Delete Music", message: "Are you sure you want to permanently delete the music?", preferredStyle: .actionSheet)
         
         let DeleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(alertAction) in
             self.handleDelete(alertAction: alertAction, deletionIndexPath: deletionIndexPath)
@@ -93,16 +91,16 @@ extension FeedViewController: UITableViewDelegate {
     
     func handleDelete(alertAction: UIAlertAction!, deletionIndexPath: IndexPath){
         
-        let musicToDelete = dataSource.list[deletionIndexPath.row]
+        let musicToDelete = dataController.list[deletionIndexPath.row]
                 
         // remove from device/db
         storageUtil.deleteFile(url: URL(fileURLWithPath: musicToDelete.path!))
         musicHelper.removeMusicFromDb(mid: musicToDelete.mid!)
         
         // remove from UI
-        dataSource.list.remove(at: deletionIndexPath.row)
+        dataController.list.remove(at: deletionIndexPath.row)
         feedTableView.deleteRows(at: [deletionIndexPath], with: .fade)
         
     }
-
+    
 }

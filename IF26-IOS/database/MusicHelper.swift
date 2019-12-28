@@ -119,4 +119,21 @@ class MusicHelper {
     
     }
     
+    func getFavedMusics(user: User) -> [Music] {
+        
+        guard let faved = user.favs else {
+            return []
+        }
+        var musicList = [Music]()
+        
+        for element in faved {
+            let fav = element as! Favourite
+            if let music = fav.music {
+                musicList.append(music)
+            }
+        }
+        return musicList
+        
+    }
+    
 }
