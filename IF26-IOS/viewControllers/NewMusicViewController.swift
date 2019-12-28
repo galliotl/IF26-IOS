@@ -83,8 +83,8 @@ extension NewMusicViewController {
         guard let title = musicTitle.text, !title.isEmpty else {
             return false
         }
-        guard let musicPath = musicUrl?.absoluteString else {
-            print("something isn't filled")
+        guard let musicPath = musicUrl?.path else {
+            print("music path isn't filled")
             return false
         }
         

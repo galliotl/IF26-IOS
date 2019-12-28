@@ -40,13 +40,12 @@ class MusicService {
             print("cannot play the music")
             return
         }
-        print(musicPath)
         do {
             
-            try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: musicPath) as URL)
+            try audioPlayer = AVAudioPlayer(contentsOf: URL(string: musicPath)!)
             let audioSession = AVAudioSession.sharedInstance()
             try audioSession.setCategory(.playback, mode: .default)
-
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
             audioStuffed = true
             

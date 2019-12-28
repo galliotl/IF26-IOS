@@ -94,7 +94,6 @@ extension FeedViewController {
         let musicToDelete = dataController.list[deletionIndexPath.row]
                 
         // remove from device/db
-        storageUtil.deleteFile(url: URL(fileURLWithPath: musicToDelete.path!))
         musicHelper.removeMusicFromDb(mid: musicToDelete.mid!)
         
         // remove from UI
