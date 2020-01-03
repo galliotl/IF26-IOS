@@ -23,6 +23,8 @@ class NewMusicViewController: UIViewController {
         super.viewDidLoad()
         error.text = ""
         
+        musicTitle.delegate = self
+        
     }
     
     @IBAction func validate(_ sender: Any) {
@@ -92,6 +94,15 @@ extension NewMusicViewController {
         let currentUser = LoginHelper.getInstance().getConnectedUserData()
         return musicHelper.addMusicToDb(title: title, path: musicPath, artist: currentUser!)
         
+    }
+    
+}
+
+extension NewMusicViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 }

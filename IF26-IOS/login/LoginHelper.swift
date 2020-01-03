@@ -114,7 +114,6 @@ class LoginHelper {
     
     private func setConnectedUserData(user: User) {
         setConnectedUser(uid: user.uid!)
-        print("setting this user: \(user)")
         userData = user
     }
     

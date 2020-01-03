@@ -19,6 +19,12 @@ class SigninViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alert.text = ""
+        
+        identifiant.delegate = self
+        password.delegate = self
+        firstname.delegate = self
+        lastname.delegate = self
+        
     }
     
         
@@ -71,4 +77,13 @@ class SigninViewController: UIViewController {
     func redirectToHomeScreen() {
         RedirectHelper.getInstance().redirectToHomeScreen()
     }
+}
+
+extension SigninViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+
 }

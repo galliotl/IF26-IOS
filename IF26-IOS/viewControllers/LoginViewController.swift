@@ -17,6 +17,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alert.text = ""
+        
+        id.delegate = self
+        password.delegate = self
+
     }
     
     @IBAction func login_button(_ sender: UIButton) {
@@ -54,4 +58,13 @@ class LoginViewController: UIViewController {
     func redirectToHomeScreen() {
         RedirectHelper.getInstance().redirectToHomeScreen()
     }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+
 }

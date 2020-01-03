@@ -10,6 +10,7 @@
 		360283DE23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 360283DC23AAAAA500D8E232 /* IF26_coredata.xcdatamodeld */; };
 		360283EF23AAD0A100D8E232 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360283EE23AAD0A100D8E232 /* MusicCell.swift */; };
 		360283F223AAD40C00D8E232 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360283F123AAD40C00D8E232 /* MusicService.swift */; };
+		3629C40323BF3EA10071C33C /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3629C40223BF3EA10071C33C /* TextFieldDelegate.swift */; };
 		36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36410CE623A29E8200F9BA29 /* RedirectHelper.swift */; };
 		364DCE49239E524000BB7558 /* Disconnected.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE25239E524000BB7558 /* Disconnected.storyboard */; };
 		364DCE4A239E524000BB7558 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364DCE26239E524000BB7558 /* Feed.storyboard */; };
@@ -65,6 +66,7 @@
 		360283EB23AAADB600D8E232 /* IF26_coredata v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "IF26_coredata v2.xcdatamodel"; sourceTree = "<group>"; };
 		360283EE23AAD0A100D8E232 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		360283F123AAD40C00D8E232 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		3629C40223BF3EA10071C33C /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		36410CE623A29E8200F9BA29 /* RedirectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectHelper.swift; sourceTree = "<group>"; };
 		364DCE25239E524000BB7558 /* Disconnected.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Disconnected.storyboard; sourceTree = "<group>"; };
 		364DCE26239E524000BB7558 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			children = (
 				360283EE23AAD0A100D8E232 /* MusicCell.swift */,
 				36C009F023B3EB15003773A4 /* MusicTableViewDataSource.swift */,
+				3629C40223BF3EA10071C33C /* TextFieldDelegate.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				36410CE723A29E8200F9BA29 /* RedirectHelper.swift in Sources */,
 				360283F223AAD40C00D8E232 /* MusicService.swift in Sources */,
 				36C009F123B3EB15003773A4 /* MusicTableViewDataSource.swift in Sources */,
+				3629C40323BF3EA10071C33C /* TextFieldDelegate.swift in Sources */,
 				364DCE5A239E524000BB7558 /* FeedViewController.swift in Sources */,
 				364DCE5C239E524000BB7558 /* SigninViewController.swift in Sources */,
 				364DCE57239E524000BB7558 /* MusicViewController.swift in Sources */,
