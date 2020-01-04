@@ -61,6 +61,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alY-SD-iKC">
+                                <rect key="frame" x="318" y="16" width="41" height="30"/>
+                                <state key="normal" title="RGPD"/>
+                                <connections>
+                                    <segue destination="man-OM-zdU" kind="show" id="WDm-ZO-gXr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -76,10 +83,12 @@
                             <constraint firstItem="0O7-be-0Cz" firstAttribute="leading" secondItem="erD-Zf-hdQ" secondAttribute="leading" constant="16" id="N8g-M0-FZu"/>
                             <constraint firstItem="erD-Zf-hdQ" firstAttribute="trailing" secondItem="0O7-be-0Cz" secondAttribute="trailing" constant="16" id="NgF-4K-xZH"/>
                             <constraint firstItem="0O7-be-0Cz" firstAttribute="top" secondItem="7lv-5T-5Q7" secondAttribute="bottom" constant="8" id="OJW-W1-fEe"/>
+                            <constraint firstItem="alY-SD-iKC" firstAttribute="top" secondItem="erD-Zf-hdQ" secondAttribute="top" constant="16" id="R1L-Lk-cd0"/>
                             <constraint firstItem="qBg-r3-kkm" firstAttribute="top" secondItem="0O7-be-0Cz" secondAttribute="bottom" constant="8" id="Utl-fF-P54"/>
                             <constraint firstItem="erD-Zf-hdQ" firstAttribute="trailing" secondItem="br2-vB-hhZ" secondAttribute="trailing" constant="16" id="YHg-Kp-TdQ"/>
                             <constraint firstItem="yL0-0O-MVN" firstAttribute="top" secondItem="qBg-r3-kkm" secondAttribute="bottom" constant="175" id="Z6V-mE-iKF"/>
                             <constraint firstItem="qBg-r3-kkm" firstAttribute="leading" secondItem="erD-Zf-hdQ" secondAttribute="leading" constant="16" id="c6h-QS-UF3"/>
+                            <constraint firstItem="erD-Zf-hdQ" firstAttribute="trailing" secondItem="alY-SD-iKC" secondAttribute="trailing" constant="16" id="cDe-3Q-msG"/>
                             <constraint firstItem="erD-Zf-hdQ" firstAttribute="bottom" secondItem="EVe-82-bgP" secondAttribute="bottom" constant="64" id="fEW-pX-azD"/>
                             <constraint firstItem="7lv-5T-5Q7" firstAttribute="top" secondItem="br2-vB-hhZ" secondAttribute="bottom" constant="8" id="fr3-IU-er0"/>
                             <constraint firstItem="7lv-5T-5Q7" firstAttribute="leading" secondItem="erD-Zf-hdQ" secondAttribute="leading" constant="16" id="lGj-hv-2rN"/>
@@ -102,6 +111,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axu-jt-vpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="205.59999999999999" y="187.55622188905548"/>
+        </scene>
+        <!--RGPD-->
+        <scene sceneID="DRy-zM-DB3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RGPD" id="man-OM-zdU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MIQ-Ia-j97"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0u-Qs-yBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="44"/>
         </scene>
     </scenes>
     <resources>

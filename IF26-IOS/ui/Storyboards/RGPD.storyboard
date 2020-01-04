@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hvQ-Ds-jhU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="exL-rS-u5q">
+            <objects>
+                <viewController id="hvQ-Ds-jhU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vkP-Wx-Unz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38t-EF-hZI">
+                                <rect key="frame" x="20" y="44" width="374" height="765"/>
+                                <string key="text">We use your data in order for other users to know a bit more about you. Also, all the music you upload will have your name associated to them. It will then be displayed in the player of everyuser</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fh-7j-7eD">
+                                <rect key="frame" x="192" y="817" width="30" height="30"/>
+                                <state key="normal" title="Ok"/>
+                                <connections>
+                                    <segue destination="S7P-3j-a3s" kind="show" id="fqJ-0R-Xi5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G6s-aw-s0x" firstAttribute="bottom" secondItem="38t-EF-hZI" secondAttribute="bottom" constant="53" id="0kB-e7-dKN"/>
+                            <constraint firstItem="3fh-7j-7eD" firstAttribute="leading" secondItem="G6s-aw-s0x" secondAttribute="leading" constant="192" id="1Pl-1S-wX9"/>
+                            <constraint firstItem="38t-EF-hZI" firstAttribute="top" secondItem="G6s-aw-s0x" secondAttribute="top" id="1VQ-kx-JLd"/>
+                            <constraint firstItem="G6s-aw-s0x" firstAttribute="trailing" secondItem="38t-EF-hZI" secondAttribute="trailing" constant="20" id="HzB-WY-EAA"/>
+                            <constraint firstItem="3fh-7j-7eD" firstAttribute="top" secondItem="38t-EF-hZI" secondAttribute="bottom" constant="8" id="X3j-LX-Yx6"/>
+                            <constraint firstItem="G6s-aw-s0x" firstAttribute="trailing" secondItem="3fh-7j-7eD" secondAttribute="trailing" constant="192" id="bGY-ma-3Ny"/>
+                            <constraint firstItem="G6s-aw-s0x" firstAttribute="bottom" secondItem="3fh-7j-7eD" secondAttribute="bottom" constant="15" id="k8N-0a-Ccc"/>
+                            <constraint firstItem="38t-EF-hZI" firstAttribute="leading" secondItem="G6s-aw-s0x" secondAttribute="leading" constant="20" id="pct-Ue-Zjb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G6s-aw-s0x"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UTK-J7-ANs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+        <!--Signin-->
+        <scene sceneID="nLp-k6-eLR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Signin" id="S7P-3j-a3s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P1N-ia-Fkq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqH-rZ-VhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="149"/>
+        </scene>
+    </scenes>
+</document>
